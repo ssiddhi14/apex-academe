@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Award, BookOpen, Target, Users, Heart, GraduationCap } from "lucide-react";
+import { Award, Target, Heart, GraduationCap } from "lucide-react";
 import Layout from "@/components/Layout";
 
 const fadeInUp = {
@@ -9,7 +9,7 @@ const fadeInUp = {
 const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.1 } } };
 
 const milestones = [
-  { year: "2010", event: "Founded with a vision to democratize CMA & CA education" },
+  { year: "2010", event: "Founded with a vision to democratize CMA education" },
   { year: "2013", event: "First batch of students achieved 100% pass rate" },
   { year: "2016", event: "Expanded to online classes reaching students pan-India" },
   { year: "2019", event: "Produced first All India Rank 1 in CMA examinations" },
@@ -26,18 +26,17 @@ const AboutPage = () => {
             About Pinnacle Academy
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.1 } }} className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
-            Empowering CMA and CA aspirants since 2010 with world-class coaching and mentorship.
+            Empowering CMA aspirants since 2010 with world-class coaching and mentorship.
           </motion.p>
         </div>
       </section>
 
-      {/* Mission, Vision */}
       <section className="section-padding">
         <div className="container-main">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid md:grid-cols-3 gap-6">
             {[
-              { icon: Target, title: "Our Mission", desc: "To provide accessible, high-quality CMA and CA coaching that transforms careers and builds future finance leaders." },
-              { icon: Heart, title: "Our Vision", desc: "To be India's most trusted and results-driven coaching institute for commerce and management accounting education." },
+              { icon: Target, title: "Our Mission", desc: "To provide accessible, high-quality CMA coaching that transforms careers and builds future finance leaders." },
+              { icon: Heart, title: "Our Vision", desc: "To be India's most trusted and results-driven coaching institute for management accounting education." },
               { icon: Award, title: "Our Values", desc: "Excellence, integrity, student-first approach, innovation in education, and a commitment to every student's success." },
             ].map((item, i) => (
               <motion.div key={i} variants={fadeInUp} className="bg-card rounded-xl border border-border p-8 text-center card-hover">
@@ -52,7 +51,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Founder Message */}
       <section className="section-padding bg-muted">
         <div className="container-main max-w-4xl">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="bg-card rounded-2xl p-8 md:p-12 border border-border">
@@ -64,7 +62,7 @@ const AboutPage = () => {
                 <h2 className="text-2xl font-heading font-bold text-foreground mb-2">Founder's Message</h2>
                 <p className="text-sm font-medium text-accent mb-3">Dr. Rajesh Kumar — Founder & Director</p>
                 <p className="text-muted-foreground leading-relaxed text-sm">
-                  "When I founded Pinnacle Academy in 2010, I had one goal — to make quality CMA and CA education accessible to every aspiring student. Over the years, we've grown from a single classroom to a premier institute, but our core philosophy remains the same: every student deserves personalized attention, world-class faculty, and a clear path to success. We don't just teach — we mentor, guide, and build the confidence that turns aspirants into achievers."
+                  "When I founded Pinnacle Academy in 2010, I had one goal — to make quality CMA education accessible to every aspiring student. Over the years, we've grown from a single classroom to a premier institute, but our core philosophy remains the same: every student deserves personalized attention, world-class faculty, and a clear path to success. We don't just teach — we mentor, guide, and build the confidence that turns aspirants into achievers."
                 </p>
               </div>
             </div>
@@ -72,7 +70,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Timeline */}
       <section className="section-padding">
         <div className="container-main max-w-3xl">
           <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="text-3xl font-heading font-bold text-foreground text-center mb-12">
@@ -96,7 +93,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Achievements */}
       <section className="section-padding bg-primary">
         <div className="container-main">
           <h2 className="text-3xl font-heading font-bold text-primary-foreground text-center mb-10">Achievements</h2>

@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { Calendar, Clock, ArrowRight, Tag } from "lucide-react";
 import Layout from "@/components/Layout";
 
@@ -16,23 +15,20 @@ const blogPosts = [
     date: "March 10, 2025",
     readTime: "8 min read",
     tag: "CMA Preparation",
-    slug: "#",
   },
   {
-    title: "CMA vs CA – Career Guide: Which is Right for You?",
-    excerpt: "An in-depth comparison of CMA and CA career paths, salaries, job prospects, and which certification suits your career goals.",
+    title: "CMA Career Guide: Opportunities After Qualification",
+    excerpt: "Explore lucrative career paths available after CMA qualification — from industry roles to consulting and entrepreneurship.",
     date: "March 5, 2025",
     readTime: "10 min read",
     tag: "Career Guide",
-    slug: "#",
   },
   {
-    title: "Best Study Plan for CA Foundation 2025",
-    excerpt: "A month-by-month study plan designed by our expert CA faculty to help you ace the CA Foundation exam on your first attempt.",
+    title: "Best Study Plan for CMA Foundation 2025",
+    excerpt: "A month-by-month study plan designed by our expert CMA faculty to help you ace the CMA Foundation exam on your first attempt.",
     date: "February 28, 2025",
     readTime: "6 min read",
-    tag: "CA Preparation",
-    slug: "#",
+    tag: "CMA Preparation",
   },
   {
     title: "Top 10 CMA Exam Tips from All India Rankers",
@@ -40,23 +36,20 @@ const blogPosts = [
     date: "February 20, 2025",
     readTime: "7 min read",
     tag: "CMA Tips",
-    slug: "#",
   },
   {
     title: "Career Opportunities After CMA: A Complete Overview",
-    excerpt: "Explore lucrative career paths available after CMA qualification — from industry roles to consulting and entrepreneurship.",
+    excerpt: "Discover the wide range of career opportunities that open up after completing your CMA certification.",
     date: "February 15, 2025",
     readTime: "9 min read",
     tag: "Career Guide",
-    slug: "#",
   },
   {
-    title: "How to Balance Work and CA Studies Effectively",
-    excerpt: "Practical tips for working professionals pursuing CA certification. Manage your time, energy, and study schedule like a pro.",
+    title: "How to Balance Work and CMA Studies Effectively",
+    excerpt: "Practical tips for working professionals pursuing CMA certification. Manage your time, energy, and study schedule like a pro.",
     date: "February 10, 2025",
     readTime: "5 min read",
     tag: "Study Tips",
-    slug: "#",
   },
 ];
 
@@ -69,7 +62,7 @@ const BlogPage = () => {
             Blog & Resources
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.1 } }} className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
-            Expert tips, study guides, and career advice for CMA and CA aspirants.
+            Expert tips, study guides, and career advice for CMA aspirants.
           </motion.p>
         </div>
       </section>
