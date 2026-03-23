@@ -14,11 +14,11 @@ const Footer = () => {
               </div>
               <div>
                 <span className="text-lg font-heading font-bold">Pinnacle</span>
-                <span className="text-sm block -mt-1 text-primary-foreground/70">CMA & CA Academy</span>
+                <span className="text-sm block -mt-1 text-primary-foreground/70">CMA Academy</span>
               </div>
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
-              India's leading coaching institute for CMA and CA aspirants. Transforming careers since 2010 with expert faculty and proven results.
+              India's leading coaching institute for CMA aspirants. Transforming careers since 2010 with expert faculty and proven results.
             </p>
             <div className="flex gap-3 mt-4">
               {[Facebook, Instagram, Youtube, Linkedin].map((Icon, i) => (
@@ -35,7 +35,6 @@ const Footer = () => {
             <ul className="space-y-2 text-sm text-primary-foreground/70">
               {[
                 { label: "Courses", path: "/courses" },
-                { label: "Faculty", path: "/faculty" },
                 { label: "Results", path: "/results" },
                 { label: "Blog", path: "/blog" },
                 { label: "About Us", path: "/about" },
@@ -52,7 +51,7 @@ const Footer = () => {
           <div>
             <h3 className="font-heading font-semibold text-lg mb-4">Our Courses</h3>
             <ul className="space-y-2 text-sm text-primary-foreground/70">
-              {["CMA Foundation", "CMA Intermediate", "CMA Final", "CA Foundation", "CA Intermediate", "CA Final"].map((c) => (
+              {["CMA Foundation", "CMA Intermediate", "CMA Final"].map((c) => (
                 <li key={c}>
                   <Link to="/courses" className="hover:text-secondary transition-colors">{c}</Link>
                 </li>
@@ -81,7 +80,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/10 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-primary-foreground/50">
-          <p>© 2025 Pinnacle CMA & CA Academy. All rights reserved.</p>
+          <p>© 2025 Pinnacle CMA Academy. All rights reserved.</p>
           <div className="flex gap-4 mt-2 md:mt-0">
             <Link to="/about" className="hover:text-primary-foreground transition-colors">Privacy Policy</Link>
             <Link to="/about" className="hover:text-primary-foreground transition-colors">Terms of Service</Link>

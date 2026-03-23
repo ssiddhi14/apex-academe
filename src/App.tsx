@@ -7,7 +7,6 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Index from "./pages/Index";
 import Courses from "./pages/Courses";
-import Faculty from "./pages/Faculty";
 import Results from "./pages/Results";
 import Gallery from "./pages/Gallery";
 import Blog from "./pages/Blog";
@@ -33,7 +32,6 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/courses" element={<Courses />} />
-          <Route path="/faculty" element={<Faculty />} />
           <Route path="/results" element={<Results />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/blog" element={<Blog />} />

@@ -30,7 +30,7 @@ const ContactPage = () => {
             Contact Us
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.1 } }} className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
-            Have questions about our courses? Get in touch and we'll help you find the right path.
+            Have questions about our CMA courses? Get in touch and we'll help you find the right path.
           </motion.p>
         </div>
       </section>
@@ -38,7 +38,6 @@ const ContactPage = () => {
       <section className="section-padding">
         <div className="container-main">
           <div className="grid lg:grid-cols-3 gap-8">
-            {/* Contact Info */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="space-y-6">
               {[
                 { icon: Phone, title: "Phone", info: "+91 98765 43210", sub: "+91 98765 43211", href: "tel:+919876543210" },
@@ -63,7 +62,6 @@ const ContactPage = () => {
               ))}
             </motion.div>
 
-            {/* Form */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="lg:col-span-2">
               <div className="bg-card rounded-2xl border border-border p-6 md:p-8">
                 <h2 className="text-2xl font-heading font-bold text-foreground mb-6">Send Us an Inquiry</h2>
@@ -83,9 +81,6 @@ const ContactPage = () => {
                       <option>CMA Foundation</option>
                       <option>CMA Intermediate</option>
                       <option>CMA Final</option>
-                      <option>CA Foundation</option>
-                      <option>CA Intermediate</option>
-                      <option>CA Final</option>
                     </select>
                   </div>
                   <Textarea placeholder="Your Message" rows={4} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} />
@@ -97,7 +92,6 @@ const ContactPage = () => {
             </motion.div>
           </div>
 
-          {/* Map */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="mt-12 rounded-2xl overflow-hidden border border-border h-[400px]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.0!2d77.2!3d28.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM2JzAwLjAiTiA3N8KwMTInMDAuMCJF!5e0!3m2!1sen!2sin!4v1"
