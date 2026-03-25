@@ -1,15 +1,23 @@
+import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { GraduationCap, Users, Trophy, BookOpen, Star, ChevronRight, Clock, CheckCircle, ArrowRight, Phone } from "lucide-react";
+import { GraduationCap, Users, Trophy, BookOpen, Star, ChevronRight, Clock, CheckCircle, ArrowRight, ArrowLeft, Phone, ChevronLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
-import heroBg from "@/assets/hero-bg.jpg";
+import slider1 from "@/assets/slider-1.jpg";
+import slider2 from "@/assets/slider-2.jpg";
+import slider3 from "@/assets/slider-3.jpg";
+
+const slides = [
+  { src: slider1, alt: "Modern classrooms at Pinnacle CMA Academy", headline: "Best CMA Coaching Institute", sub: "Expert faculty, proven results, and personalized attention to crack CMA exams." },
+  { src: slider2, alt: "Students celebrating CMA exam success", headline: "95% Success Rate", sub: "Join thousands of successful CMA professionals trained by Pinnacle Academy." },
+  { src: slider3, alt: "Expert faculty teaching CMA courses", headline: "Learn from the Best", sub: "Industry-experienced CMA faculty with 14+ years of proven teaching excellence." },
+];
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
-
 const staggerContainer = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.15 } },
@@ -23,9 +31,9 @@ const stats = [
 ];
 
 const courses = [
-  { title: "CMA Foundation", duration: "8 Months", desc: "Start your CMA journey with a strong foundation in management accounting fundamentals.", color: "bg-accent/10 text-accent" },
-  { title: "CMA Intermediate", duration: "12 Months", desc: "Deepen your expertise in cost management, financial analysis, and strategic planning.", color: "bg-secondary/20 text-secondary-foreground" },
-  { title: "CMA Final", duration: "12 Months", desc: "Master advanced concepts and prepare for the ultimate CMA qualification.", color: "bg-primary/10 text-primary" },
+  { title: "CMA Foundation", duration: "8 Months", desc: "Start your CMA journey with a strong foundation in management accounting fundamentals.", color: "bg-accent/10 text-accent", path: "/cma-foundation" },
+  { title: "CMA Intermediate", duration: "12 Months", desc: "Deepen your expertise in cost management, financial analysis, and strategic planning.", color: "bg-secondary/20 text-secondary-foreground", path: "/cma-intermediate" },
+  { title: "CMA Final", duration: "12 Months", desc: "Master advanced concepts and prepare for the ultimate CMA qualification.", color: "bg-primary/10 text-primary", path: "/cma-final" },
 ];
 
 const testimonials = [
@@ -34,44 +42,79 @@ const testimonials = [
   { name: "Arjun Nair", rank: "AIR 10, CMA Foundation", text: "The comprehensive study material and regular tests kept me on track throughout my preparation.", avatar: "AN" },
 ];
 
+const HeroCarousel = () => {
+  const [current, setCurrent] = useState(0);
+
+  const next = useCallback(() => setCurrent((p) => (p + 1) % slides.length), []);
+  const prev = useCallback(() => setCurrent((p) => (p - 1 + slides.length) % slides.length), []);
+
+  useEffect(() => {
+    const timer = setInterval(next, 5000);
+    return () => clearInterval(timer);
+  }, [next]);
+
+  return (
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      {slides.map((slide, i) => (
+        <div
+          key={i}
+          className={`absolute inset-0 transition-opacity duration-700 ${i === current ? "opacity-100" : "opacity-0"}`}
+        >
+          <img src={slide.src} alt={slide.alt} className="w-full h-full object-cover" width={1920} height={800} />
+          <div className="absolute inset-0 gradient-hero opacity-90" />
+        </div>
+      ))}
+
+      <div className="relative container-main px-4 py-20 md:py-32">
+        <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-3xl">
+          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 rounded-full bg-secondary/20 backdrop-blur-sm px-4 py-2 text-sm font-medium text-primary-foreground/90 mb-6 border border-secondary/30">
+            <Star className="h-4 w-4 text-secondary" />
+            Rated #1 CMA Coaching Institute
+          </motion.div>
+          <motion.h1 variants={fadeInUp} className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-primary-foreground leading-tight mb-4">
+            {slides[current].headline}
+          </motion.h1>
+          <motion.p variants={fadeInUp} className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mb-8 leading-relaxed">
+            {slides[current].sub}
+          </motion.p>
+          <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
+            <Button variant="hero" size="lg" className="text-base px-8" asChild>
+              <Link to="/contact">Enroll Now <ArrowRight className="h-5 w-5 ml-1" /></Link>
+            </Button>
+            <Button variant="hero-outline" size="lg" className="text-base px-8" asChild>
+              <Link to="/contact">Book Free Demo</Link>
+            </Button>
+          </motion.div>
+          <motion.div variants={fadeInUp} className="mt-8 flex items-center gap-6 text-primary-foreground/70 text-sm">
+            <span className="flex items-center gap-1"><CheckCircle className="h-4 w-4 text-secondary" /> Free Counselling</span>
+            <span className="flex items-center gap-1"><CheckCircle className="h-4 w-4 text-secondary" /> Flexible Batches</span>
+            <span className="flex items-center gap-1"><CheckCircle className="h-4 w-4 text-secondary" /> Online + Offline</span>
+          </motion.div>
+        </motion.div>
+      </div>
+
+      {/* Arrows */}
+      <button onClick={prev} className="absolute left-4 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-card/30 backdrop-blur-sm flex items-center justify-center hover:bg-card/60 transition-colors z-10" aria-label="Previous slide">
+        <ChevronLeft className="h-5 w-5 text-primary-foreground" />
+      </button>
+      <button onClick={next} className="absolute right-4 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-card/30 backdrop-blur-sm flex items-center justify-center hover:bg-card/60 transition-colors z-10" aria-label="Next slide">
+        <ChevronRight className="h-5 w-5 text-primary-foreground" />
+      </button>
+
+      {/* Dots */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+        {slides.map((_, i) => (
+          <button key={i} onClick={() => setCurrent(i)} className={`h-2.5 rounded-full transition-all ${i === current ? "w-8 bg-secondary" : "w-2.5 bg-primary-foreground/40"}`} aria-label={`Go to slide ${i + 1}`} />
+        ))}
+      </div>
+    </section>
+  );
+};
+
 const Index = () => {
   return (
     <Layout>
-      {/* Hero */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={heroBg} alt="Students studying at Pinnacle CMA Academy" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 gradient-hero opacity-90" />
-        </div>
-        <div className="relative container-main px-4 py-20 md:py-32">
-          <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-3xl">
-            <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 rounded-full bg-secondary/20 backdrop-blur-sm px-4 py-2 text-sm font-medium text-primary-foreground/90 mb-6 border border-secondary/30">
-              <Star className="h-4 w-4 text-secondary" />
-              Rated #1 CMA Coaching Institute
-            </motion.div>
-            <motion.h1 variants={fadeInUp} className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-primary-foreground leading-tight mb-6">
-              Best CMA<br />
-              <span className="text-gradient">Coaching Institute</span>
-            </motion.h1>
-            <motion.p variants={fadeInUp} className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mb-8 leading-relaxed">
-              Join India's most trusted CMA coaching academy. Expert faculty, proven results, and personalized attention to help you crack CMA exams with flying colors.
-            </motion.p>
-            <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
-              <Button variant="hero" size="lg" className="text-base px-8" asChild>
-                <Link to="/contact">Enroll Now <ArrowRight className="h-5 w-5 ml-1" /></Link>
-              </Button>
-              <Button variant="hero-outline" size="lg" className="text-base px-8" asChild>
-                <Link to="/contact">Book Free Demo</Link>
-              </Button>
-            </motion.div>
-            <motion.div variants={fadeInUp} className="mt-8 flex items-center gap-6 text-primary-foreground/70 text-sm">
-              <span className="flex items-center gap-1"><CheckCircle className="h-4 w-4 text-secondary" /> Free Counselling</span>
-              <span className="flex items-center gap-1"><CheckCircle className="h-4 w-4 text-secondary" /> Flexible Batches</span>
-              <span className="flex items-center gap-1"><CheckCircle className="h-4 w-4 text-secondary" /> Online + Offline</span>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+      <HeroCarousel />
 
       {/* Stats */}
       <section className="relative -mt-16 z-10 px-4">
@@ -112,7 +155,7 @@ const Index = () => {
                 <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{course.desc}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-muted-foreground flex items-center gap-1"><Clock className="h-3.5 w-3.5" /> {course.duration}</span>
-                  <Link to="/courses" className="text-sm font-medium text-accent flex items-center gap-1 group-hover:gap-2 transition-all">
+                  <Link to={course.path} className="text-sm font-medium text-accent flex items-center gap-1 group-hover:gap-2 transition-all">
                     Learn More <ChevronRight className="h-4 w-4" />
                   </Link>
                 </div>
