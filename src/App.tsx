@@ -8,10 +8,12 @@ import { useLocation } from "react-router-dom";
 import Index from "./pages/Index";
 import Courses from "./pages/Courses";
 import Results from "./pages/Results";
-import Gallery from "./pages/Gallery";
 import Blog from "./pages/Blog";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import CMAFoundation from "./pages/CMAFoundation";
+import CMAIntermediate from "./pages/CMAIntermediate";
+import CMAFinal from "./pages/CMAFinal";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,8 +34,10 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/courses" element={<Courses />} />
+          <Route path="/cma-foundation" element={<CMAFoundation />} />
+          <Route path="/cma-intermediate" element={<CMAIntermediate />} />
+          <Route path="/cma-final" element={<CMAFinal />} />
           <Route path="/results" element={<Results />} />
-          <Route path="/gallery" element={<Gallery />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

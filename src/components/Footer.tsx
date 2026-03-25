@@ -51,9 +51,13 @@ const Footer = () => {
           <div>
             <h3 className="font-heading font-semibold text-lg mb-4">Our Courses</h3>
             <ul className="space-y-2 text-sm text-primary-foreground/70">
-              {["CMA Foundation", "CMA Intermediate", "CMA Final"].map((c) => (
-                <li key={c}>
-                  <Link to="/courses" className="hover:text-secondary transition-colors">{c}</Link>
+              {[
+                { label: "CMA Foundation", path: "/cma-foundation" },
+                { label: "CMA Intermediate", path: "/cma-intermediate" },
+                { label: "CMA Final", path: "/cma-final" },
+              ].map((c) => (
+                <li key={c.path}>
+                  <Link to={c.path} className="hover:text-secondary transition-colors">{c.label}</Link>
                 </li>
               ))}
             </ul>
