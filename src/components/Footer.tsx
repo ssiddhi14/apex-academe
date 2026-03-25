@@ -13,8 +13,8 @@ const Footer = () => {
                 <GraduationCap className="h-6 w-6 text-secondary-foreground" />
               </div>
               <div>
-                <span className="text-lg font-heading font-bold">Pinnacle</span>
-                <span className="text-sm block -mt-1 text-primary-foreground/70">CMA Academy</span>
+                <span className="text-lg font-heading font-bold">Commerce</span>
+                <span className="text-sm block -mt-1 text-primary-foreground/70">Educators</span>
               </div>
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
@@ -84,7 +84,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/10 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-primary-foreground/50">
-          <p>© 2025 Pinnacle CMA Academy. All rights reserved.</p>
+          <p>© 2025 Commerce Educators. All rights reserved.</p>
           <div className="flex gap-4 mt-2 md:mt-0">
             <Link to="/about" className="hover:text-primary-foreground transition-colors">Privacy Policy</Link>
             <Link to="/about" className="hover:text-primary-foreground transition-colors">Terms of Service</Link>

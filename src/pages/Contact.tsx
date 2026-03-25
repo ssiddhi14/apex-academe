@@ -101,7 +101,7 @@ const ContactPage = () => {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Pinnacle Academy Location"
+              title="Commerce Educators Location"
             />
           </motion.div>
         </div>
