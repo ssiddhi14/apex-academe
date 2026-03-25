@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import Courses from "./pages/Courses";
 import Results from "./pages/Results";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import CMAFoundation from "./pages/CMAFoundation";
