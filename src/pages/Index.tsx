@@ -9,8 +9,8 @@ import slider2 from "@/assets/slider-2.jpg";
 import slider3 from "@/assets/slider-3.jpg";
 
 const slides = [
-  { src: slider1, alt: "Modern classrooms at Pinnacle CMA Academy", headline: "Best CMA Coaching Institute", sub: "Expert faculty, proven results, and personalized attention to crack CMA exams." },
-  { src: slider2, alt: "Students celebrating CMA exam success", headline: "95% Success Rate", sub: "Join thousands of successful CMA professionals trained by Pinnacle Academy." },
+  { src: slider1, alt: "Modern classrooms at Commerce Educators", headline: "Best CMA Coaching Institute", sub: "Expert faculty, proven results, and personalized attention to crack CMA exams." },
+  { src: slider2, alt: "Students celebrating CMA exam success", headline: "95% Success Rate", sub: "Join thousands of successful CMA professionals trained by Commerce Educators." },
   { src: slider3, alt: "Expert faculty teaching CMA courses", headline: "Learn from the Best", sub: "Industry-experienced CMA faculty with 14+ years of proven teaching excellence." },
 ];
 
@@ -37,8 +37,8 @@ const courses = [
 ];
 
 const testimonials = [
-  { name: "Priya Sharma", rank: "AIR 3, CMA Final", text: "Pinnacle Academy transformed my preparation. The faculty's dedication and structured approach helped me secure All India Rank 3.", avatar: "PS" },
-  { name: "Anita Desai", rank: "AIR 1, CMA Inter", text: "I owe my success to Pinnacle Academy. The personalized attention and rigorous practice tests made all the difference.", avatar: "AD" },
+  { name: "Priya Sharma", rank: "AIR 3, CMA Final", text: "Commerce Educators transformed my preparation. The faculty's dedication and structured approach helped me secure All India Rank 3.", avatar: "PS" },
+  { name: "Anita Desai", rank: "AIR 1, CMA Inter", text: "I owe my success to Commerce Educators. The personalized attention and rigorous practice tests made all the difference.", avatar: "AD" },
   { name: "Arjun Nair", rank: "AIR 10, CMA Foundation", text: "The comprehensive study material and regular tests kept me on track throughout my preparation.", avatar: "AN" },
 ];
 
@@ -176,7 +176,7 @@ const Index = () => {
         <div className="container-main">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer}>
             <motion.div variants={fadeInUp} className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">Why Choose Pinnacle Academy?</h2>
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">Why Choose Commerce Educators?</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">Discover what makes us the preferred choice for CMA aspirants across India.</p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

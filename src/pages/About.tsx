@@ -24,14 +24,14 @@ const founders = [
     name: "Dr. Rajesh Kumar",
     designation: "Founder & Director",
     message:
-      "When I founded Pinnacle Academy in 2010, I had one goal — to make quality CMA education accessible to every aspiring student. Over the years, we've grown from a single classroom to a premier institute, but our core philosophy remains the same: every student deserves personalized attention, world-class faculty, and a clear path to success. We don't just teach — we mentor, guide, and build the confidence that turns aspirants into achievers.",
+      "When I founded Commerce Educators in 2010, I had one goal — to make quality CMA education accessible to every aspiring student. Over the years, we've grown from a single classroom to a premier institute, but our core philosophy remains the same: every student deserves personalized attention, world-class faculty, and a clear path to success. We don't just teach — we mentor, guide, and build the confidence that turns aspirants into achievers.",
   },
   {
     initials: "PS",
     name: "Prof. Priya Sharma",
     designation: "Co-Founder & Academic Head",
     message:
-      "Education is not just about passing exams — it's about building a mindset that drives lifelong success. At Pinnacle Academy, we focus on conceptual clarity, practical application, and continuous mentorship. Every student who walks through our doors becomes part of a family that celebrates their growth. Our innovative teaching methods and dedicated faculty ensure that each aspirant is fully prepared — not just for the CMA exam, but for a thriving career in management accounting.",
+      "Education is not just about passing exams — it's about building a mindset that drives lifelong success. At Commerce Educators, we focus on conceptual clarity, practical application, and continuous mentorship. Every student who walks through our doors becomes part of a family that celebrates their growth. Our innovative teaching methods and dedicated faculty ensure that each aspirant is fully prepared — not just for the CMA exam, but for a thriving career in management accounting.",
   },
 ];
 
@@ -58,7 +58,7 @@ const AboutPage = () => {
       <section className="gradient-hero section-padding">
         <div className="container-main text-center">
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-4xl md:text-5xl font-heading font-extrabold text-primary-foreground mb-4">
-            About Pinnacle Academy
+            About Commerce Educators
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.1 } }} className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
             Empowering CMA aspirants since 2010 with world-class coaching and mentorship.
