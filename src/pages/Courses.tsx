@@ -96,7 +96,7 @@ const CoursesPage = () => {
                   <div className="flex flex-col justify-center items-center lg:items-end gap-3 lg:min-w-[200px]">
                     <div className="text-3xl font-heading font-extrabold text-foreground">{course.fees}</div>
                     <Button variant="gold" size="lg" asChild>
-                      <Link to="/contact">Enroll Now <ArrowRight className="h-4 w-4 ml-1" /></Link>
+                      <Link to={`/${course.id}`}>View Details <ArrowRight className="h-4 w-4 ml-1" /></Link>
                     </Button>
                     <Button variant="outline" size="sm" asChild>
                       <Link to="/contact">Book Free Demo</Link>
