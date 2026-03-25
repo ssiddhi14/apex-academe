@@ -61,8 +61,8 @@ const Navbar = () => {
             <GraduationCap className="h-6 w-6 text-primary-foreground" />
           </div>
           <div>
-            <span className="text-lg font-heading font-bold text-foreground">Commerce Educators</span>
-            <span className="text-sm block -mt-1 text-muted-foreground font-medium">CMA Academy</span>
+            <span className="text-lg font-heading font-bold text-foreground">Commerce</span>
+            <span className="text-sm block -mt-1 text-muted-foreground font-medium">Educators</span>
           </div>
         </Link>
 

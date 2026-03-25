@@ -13,8 +13,8 @@ const Footer = () => {
                 <GraduationCap className="h-6 w-6 text-secondary-foreground" />
               </div>
               <div>
-                <span className="text-lg font-heading font-bold">Commerce Educators</span>
-                <span className="text-sm block -mt-1 text-primary-foreground/70">CMA Academy</span>
+                <span className="text-lg font-heading font-bold">Commerce</span>
+                <span className="text-sm block -mt-1 text-primary-foreground/70">Educators</span>
               </div>
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
