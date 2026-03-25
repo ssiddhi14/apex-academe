@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import Navbar from "./Navbar";
+import AnnouncementBar from "./AnnouncementBar";
 import Footer from "./Footer";
 import WhatsAppButton from "./WhatsAppButton";
 
