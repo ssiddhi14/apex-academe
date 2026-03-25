@@ -1,57 +1,14 @@
 import { motion } from "framer-motion";
 import { Calendar, Clock, ArrowRight, Tag } from "lucide-react";
+import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
+import { blogPosts } from "@/data/blogPosts";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.1 } } };
-
-const blogPosts = [
-  {
-    title: "How to Prepare for CMA Exams: Complete Guide 2025",
-    excerpt: "A comprehensive strategy guide covering study plans, time management, and exam-day tips for CMA Foundation, Inter, and Final exams.",
-    date: "March 10, 2025",
-    readTime: "8 min read",
-    tag: "CMA Preparation",
-  },
-  {
-    title: "CMA Career Guide: Opportunities After Qualification",
-    excerpt: "Explore lucrative career paths available after CMA qualification — from industry roles to consulting and entrepreneurship.",
-    date: "March 5, 2025",
-    readTime: "10 min read",
-    tag: "Career Guide",
-  },
-  {
-    title: "Best Study Plan for CMA Foundation 2025",
-    excerpt: "A month-by-month study plan designed by our expert CMA faculty to help you ace the CMA Foundation exam on your first attempt.",
-    date: "February 28, 2025",
-    readTime: "6 min read",
-    tag: "CMA Preparation",
-  },
-  {
-    title: "Top 10 CMA Exam Tips from All India Rankers",
-    excerpt: "Our top-performing students share their secrets to cracking the CMA exam with top ranks. Learn from the best!",
-    date: "February 20, 2025",
-    readTime: "7 min read",
-    tag: "CMA Tips",
-  },
-  {
-    title: "Career Opportunities After CMA: A Complete Overview",
-    excerpt: "Discover the wide range of career opportunities that open up after completing your CMA certification.",
-    date: "February 15, 2025",
-    readTime: "9 min read",
-    tag: "Career Guide",
-  },
-  {
-    title: "How to Balance Work and CMA Studies Effectively",
-    excerpt: "Practical tips for working professionals pursuing CMA certification. Manage your time, energy, and study schedule like a pro.",
-    date: "February 10, 2025",
-    readTime: "5 min read",
-    tag: "Study Tips",
-  },
-];
 
 const BlogPage = () => {
   return (
@@ -70,8 +27,8 @@ const BlogPage = () => {
       <section className="section-padding">
         <div className="container-main">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {blogPosts.map((post, i) => (
-              <motion.article key={i} variants={fadeInUp} className="bg-card rounded-xl border border-border overflow-hidden card-hover group">
+            {blogPosts.map((post) => (
+              <motion.article key={post.slug} variants={fadeInUp} className="bg-card rounded-xl border border-border overflow-hidden card-hover group">
                 <div className="h-40 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
                   <Tag className="h-10 w-10 text-muted-foreground/30" />
                 </div>
@@ -83,9 +40,9 @@ const BlogPage = () => {
                   </div>
                   <h3 className="text-lg font-heading font-bold text-foreground mb-2 group-hover:text-accent transition-colors leading-snug">{post.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4">{post.excerpt}</p>
-                  <span className="text-sm font-medium text-accent flex items-center gap-1 group-hover:gap-2 transition-all">
+                  <Link to={`/blog/${post.slug}`} className="text-sm font-medium text-accent flex items-center gap-1 group-hover:gap-2 transition-all">
                     Read More <ArrowRight className="h-4 w-4" />
-                  </span>
+                  </Link>
                 </div>
               </motion.article>
             ))}

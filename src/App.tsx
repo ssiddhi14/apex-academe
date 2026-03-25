@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import Courses from "./pages/Courses";
 import Results from "./pages/Results";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import CMAFoundation from "./pages/CMAFoundation";
@@ -39,6 +40,7 @@ const App = () => (
           <Route path="/cma-final" element={<CMAFinal />} />
           <Route path="/results" element={<Results />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
