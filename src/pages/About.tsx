@@ -91,8 +91,12 @@ const AboutPage = () => {
                   className="p-8 md:p-12"
                 >
                   <div className="flex flex-col md:flex-row gap-8 items-center">
-                    <div className="h-28 w-28 md:h-32 md:w-32 rounded-full bg-primary/10 flex items-center justify-center text-3xl md:text-4xl font-bold text-primary shrink-0">
-                      {founder.initials}
+                    <div className="h-28 w-28 md:h-32 md:w-32 rounded-full bg-primary/10 flex items-center justify-center text-3xl md:text-4xl font-bold text-primary shrink-0 overflow-hidden">
+                      {founder.image ? (
+                        <img src={founder.image} alt={founder.name} className="h-full w-full object-cover" />
+                      ) : (
+                        founder.initials
+                      )}
                     </div>
                     <div className="text-center md:text-left">
                       <p className="text-lg font-heading font-bold text-foreground">{founder.name}</p>
