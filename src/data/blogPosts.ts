@@ -1,3 +1,19 @@
+/**
+ * BLOG POSTS DATA
+ * ================
+ * To add a blog preview image:
+ * 1. Add the image to src/assets/blog/ folder (e.g., cma-prep.jpg)
+ * 2. Import it below
+ * 3. Set the `image` field for the corresponding blog post
+ *
+ * If `image` is undefined, a gradient placeholder will be shown.
+ * Recommended image size: 600x340px (landscape)
+ */
+
+// Example imports (uncomment and update when adding real photos):
+// import cmaPrepImage from "@/assets/blog/cma-prep.jpg";
+// import cmaCareerImage from "@/assets/blog/cma-career.jpg";
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -6,6 +22,8 @@ export interface BlogPost {
   readTime: string;
   tag: string;
   content: string[];
+  /** Optional preview image for the blog card. Falls back to gradient placeholder. */
+  image?: string;
 }
 
 export const blogPosts: BlogPost[] = [

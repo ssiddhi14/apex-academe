@@ -1,23 +1,13 @@
 import { motion } from "framer-motion";
 import { Trophy, Star } from "lucide-react";
 import Layout from "@/components/Layout";
+import { toppers } from "@/data/toppersData";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.08 } } };
-
-const toppers = [
-  { name: "Anita Desai", rank: "AIR 1", exam: "CMA Intermediate, Dec 2024", quote: "Commerce Educators's structured approach and dedicated faculty made all the difference. I couldn't have done it without them." },
-  { name: "Rohit Patel", rank: "AIR 2", exam: "CMA Final, June 2024", quote: "The mock tests and personalized mentoring helped me identify my weak areas and convert them into strengths." },
-  { name: "Priya Sharma", rank: "AIR 3", exam: "CMA Final, Dec 2024", quote: "The faculty at Commerce Educators are truly exceptional. Their passion for teaching is contagious." },
-  { name: "Arjun Nair", rank: "AIR 5", exam: "CMA Foundation, Dec 2024", quote: "The comprehensive study material and regular tests kept me on track throughout my preparation." },
-  { name: "Sneha Reddy", rank: "AIR 7", exam: "CMA Foundation, June 2024", quote: "I joined Commerce Educators as an average student and came out as a topper. The transformation was incredible." },
-  { name: "Karan Malhotra", rank: "AIR 10", exam: "CMA Intermediate, June 2024", quote: "Best coaching institute for CMA preparation. The doubt-solving sessions were incredibly helpful." },
-  { name: "Meera Iyer", rank: "AIR 12", exam: "CMA Final, May 2024", quote: "Commerce Educators doesn't just teach — they build your confidence to face the toughest exams." },
-  { name: "Rahul Verma", rank: "AIR 15", exam: "CMA Intermediate, Nov 2024", quote: "The online classes were just as good as offline. I could study from home without missing anything." },
-];
 
 const ResultsPage = () => {
   return (
@@ -60,8 +50,14 @@ const ResultsPage = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {toppers.map((t, i) => (
               <motion.div key={i} variants={fadeInUp} className="bg-card rounded-xl border border-border p-5 card-hover text-center">
-                <div className="h-16 w-16 rounded-full bg-secondary/15 flex items-center justify-center mx-auto mb-3 text-xl font-bold text-secondary">
-                  {t.name.split(' ').map(n => n[0]).join('')}
+                <div className="h-16 w-16 rounded-full bg-secondary/15 flex items-center justify-center mx-auto mb-3 overflow-hidden">
+                  {t.image ? (
+                    <img src={t.image} alt={t.name} className="h-full w-full object-cover" />
+                  ) : (
+                    <span className="text-xl font-bold text-secondary">
+                      {t.name.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  )}
                 </div>
                 <div className="inline-flex items-center gap-1 bg-secondary/10 text-secondary text-xs font-bold px-3 py-1 rounded-full mb-2">
                   <Trophy className="h-3 w-3" /> {t.rank}

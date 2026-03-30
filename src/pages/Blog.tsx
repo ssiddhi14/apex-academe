@@ -29,8 +29,12 @@ const BlogPage = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {blogPosts.map((post) => (
               <motion.article key={post.slug} variants={fadeInUp} className="bg-card rounded-xl border border-border overflow-hidden card-hover group">
-                <div className="h-40 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                  <Tag className="h-10 w-10 text-muted-foreground/30" />
+                <div className="h-40 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center overflow-hidden">
+                  {post.image ? (
+                    <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
+                  ) : (
+                    <Tag className="h-10 w-10 text-muted-foreground/30" />
+                  )}
                 </div>
                 <div className="p-5">
                   <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
