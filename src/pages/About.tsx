@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Award, Target, Heart, GraduationCap, ChevronLeft, ChevronRight } from "lucide-react";
 import Layout from "@/components/Layout";
+import { founders } from "@/data/foundersData";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -16,23 +17,6 @@ const milestones = [
   { year: "2019", event: "Produced first All India Rank 1 in CMA examinations" },
   { year: "2022", event: "15,000+ students trained milestone achieved" },
   { year: "2025", event: "Launched advanced AI-powered learning platform" },
-];
-
-const founders = [
-  {
-    initials: "RK",
-    name: "Dr. Rajesh Kumar",
-    designation: "Founder & Director",
-    message:
-      "When I founded Commerce Educators in 2010, I had one goal — to make quality CMA education accessible to every aspiring student. Over the years, we've grown from a single classroom to a premier institute, but our core philosophy remains the same: every student deserves personalized attention, world-class faculty, and a clear path to success. We don't just teach — we mentor, guide, and build the confidence that turns aspirants into achievers.",
-  },
-  {
-    initials: "PS",
-    name: "Prof. Priya Sharma",
-    designation: "Co-Founder & Academic Head",
-    message:
-      "Education is not just about passing exams — it's about building a mindset that drives lifelong success. At Commerce Educators, we focus on conceptual clarity, practical application, and continuous mentorship. Every student who walks through our doors becomes part of a family that celebrates their growth. Our innovative teaching methods and dedicated faculty ensure that each aspirant is fully prepared — not just for the CMA exam, but for a thriving career in management accounting.",
-  },
 ];
 
 const AboutPage = () => {

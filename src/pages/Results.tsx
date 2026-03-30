@@ -50,8 +50,14 @@ const ResultsPage = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {toppers.map((t, i) => (
               <motion.div key={i} variants={fadeInUp} className="bg-card rounded-xl border border-border p-5 card-hover text-center">
-                <div className="h-16 w-16 rounded-full bg-secondary/15 flex items-center justify-center mx-auto mb-3 text-xl font-bold text-secondary">
-                  {t.name.split(' ').map(n => n[0]).join('')}
+                <div className="h-16 w-16 rounded-full bg-secondary/15 flex items-center justify-center mx-auto mb-3 overflow-hidden">
+                  {t.image ? (
+                    <img src={t.image} alt={t.name} className="h-full w-full object-cover" />
+                  ) : (
+                    <span className="text-xl font-bold text-secondary">
+                      {t.name.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  )}
                 </div>
                 <div className="inline-flex items-center gap-1 bg-secondary/10 text-secondary text-xs font-bold px-3 py-1 rounded-full mb-2">
                   <Trophy className="h-3 w-3" /> {t.rank}
