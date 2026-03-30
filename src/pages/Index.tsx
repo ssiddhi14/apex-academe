@@ -4,15 +4,7 @@ import { motion } from "framer-motion";
 import { GraduationCap, Users, Trophy, BookOpen, Star, ChevronRight, Clock, CheckCircle, ArrowRight, ArrowLeft, Phone, ChevronLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
-import slider1 from "@/assets/slider-1.jpg";
-import slider2 from "@/assets/slider-2.jpg";
-import slider3 from "@/assets/slider-3.jpg";
-
-const slides = [
-  { src: slider1, alt: "Modern classrooms at Commerce Educators", headline: "Best CMA Coaching Institute", sub: "Expert faculty, proven results, and personalized attention to crack CMA exams." },
-  { src: slider2, alt: "Students celebrating CMA exam success", headline: "95% Success Rate", sub: "Join thousands of successful CMA professionals trained by Commerce Educators." },
-  { src: slider3, alt: "Expert faculty teaching CMA courses", headline: "Learn from the Best", sub: "Industry-experienced CMA faculty with 14+ years of proven teaching excellence." },
-];
+import { slides } from "@/data/sliderData";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
