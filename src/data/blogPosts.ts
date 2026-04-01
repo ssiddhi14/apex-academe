@@ -29,6 +29,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-prepare-for-cma-exams",
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=340&fit=crop",
     title: "How to Prepare for CMA Exams: Complete Guide 2025",
     excerpt: "A comprehensive strategy guide covering study plans, time management, and exam-day tips for CMA Foundation, Inter, and Final exams.",
     date: "March 10, 2025",
@@ -55,6 +56,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "cma-career-guide-opportunities",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=340&fit=crop",
     title: "CMA Career Guide: Opportunities After Qualification",
     excerpt: "Explore lucrative career paths available after CMA qualification — from industry roles to consulting and entrepreneurship.",
     date: "March 5, 2025",
@@ -85,6 +87,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "best-study-plan-cma-foundation-2025",
+    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&h=340&fit=crop",
     title: "Best Study Plan for CMA Foundation 2025",
     excerpt: "A month-by-month study plan designed by our expert CMA faculty to help you ace the CMA Foundation exam on your first attempt.",
     date: "February 28, 2025",
@@ -112,6 +115,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "top-10-cma-exam-tips-from-rankers",
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=340&fit=crop",
     title: "Top 10 CMA Exam Tips from All India Rankers",
     excerpt: "Our top-performing students share their secrets to cracking the CMA exam with top ranks. Learn from the best!",
     date: "February 20, 2025",
@@ -147,6 +151,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "career-opportunities-after-cma",
+    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=340&fit=crop",
     title: "Career Opportunities After CMA: A Complete Overview",
     excerpt: "Discover the wide range of career opportunities that open up after completing your CMA certification.",
     date: "February 15, 2025",
@@ -177,6 +182,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "how-to-balance-work-and-cma-studies",
+    image: "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=600&h=340&fit=crop",
     title: "How to Balance Work and CMA Studies Effectively",
     excerpt: "Practical tips for working professionals pursuing CMA certification. Manage your time, energy, and study schedule like a pro.",
     date: "February 10, 2025",
