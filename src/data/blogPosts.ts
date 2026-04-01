@@ -151,6 +151,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "career-opportunities-after-cma",
+    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=340&fit=crop",
     title: "Career Opportunities After CMA: A Complete Overview",
     excerpt: "Discover the wide range of career opportunities that open up after completing your CMA certification.",
     date: "February 15, 2025",
