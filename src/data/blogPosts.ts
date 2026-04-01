@@ -182,6 +182,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "how-to-balance-work-and-cma-studies",
+    image: "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=600&h=340&fit=crop",
     title: "How to Balance Work and CMA Studies Effectively",
     excerpt: "Practical tips for working professionals pursuing CMA certification. Manage your time, energy, and study schedule like a pro.",
     date: "February 10, 2025",
