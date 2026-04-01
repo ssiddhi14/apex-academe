@@ -56,6 +56,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "cma-career-guide-opportunities",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=340&fit=crop",
     title: "CMA Career Guide: Opportunities After Qualification",
     excerpt: "Explore lucrative career paths available after CMA qualification — from industry roles to consulting and entrepreneurship.",
     date: "March 5, 2025",
