@@ -29,6 +29,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-prepare-for-cma-exams",
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=340&fit=crop",
     title: "How to Prepare for CMA Exams: Complete Guide 2025",
     excerpt: "A comprehensive strategy guide covering study plans, time management, and exam-day tips for CMA Foundation, Inter, and Final exams.",
     date: "March 10, 2025",
