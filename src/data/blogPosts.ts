@@ -87,6 +87,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "best-study-plan-cma-foundation-2025",
+    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&h=340&fit=crop",
     title: "Best Study Plan for CMA Foundation 2025",
     excerpt: "A month-by-month study plan designed by our expert CMA faculty to help you ace the CMA Foundation exam on your first attempt.",
     date: "February 28, 2025",
