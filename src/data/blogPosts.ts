@@ -115,6 +115,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "top-10-cma-exam-tips-from-rankers",
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=340&fit=crop",
     title: "Top 10 CMA Exam Tips from All India Rankers",
     excerpt: "Our top-performing students share their secrets to cracking the CMA exam with top ranks. Learn from the best!",
     date: "February 20, 2025",
