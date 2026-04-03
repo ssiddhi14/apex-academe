@@ -9,7 +9,7 @@ const AnnouncementBar = () => {
           🎓 Admissions Open for 2025–26 Batch!
         </p>
         <Button variant="gold" size="sm" asChild>
-          <Link to="/contact">Apply Now</Link>
+          <a href="https://www.commerceeducators.com/courses" target="_blank" rel="noopener noreferrer">Apply Now</a>
         </Button>
       </div>
     </div>

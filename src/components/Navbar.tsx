@@ -43,12 +43,12 @@ const Navbar = () => {
       <div className="bg-primary">
         <div className="container-main flex items-center justify-between py-2 px-4 text-sm text-primary-foreground/90">
           <div className="flex items-center gap-4">
-            <a href="tel:+919876543210" className="flex items-center gap-1 hover:text-primary-foreground transition-colors">
+            <a href="tel:+917737806700" className="flex items-center gap-1 hover:text-primary-foreground transition-colors">
               <Phone className="h-3 w-3" />
-              +91 98765 43210
+              +91 77378 06700
             </a>
             <span className="hidden sm:inline">|</span>
-            <span className="hidden sm:inline">info@cmacacoaching.com</span>
+            <span className="hidden sm:inline">Commerceeducators111@gmail.com</span>
           </div>
           <div className="hidden md:block font-medium">Admissions Open for 2025-26 Batch!</div>
         </div>
@@ -115,7 +115,7 @@ const Navbar = () => {
 
         <div className="hidden lg:flex items-center gap-3">
           <Button variant="gold" size="sm" asChild>
-            <Link to="/contact">Enroll Now</Link>
+            <a href="https://www.commerceeducators.com/courses" target="_blank" rel="noopener noreferrer">Enroll Now</a>
           </Button>
         </div>
 
@@ -179,7 +179,7 @@ const Navbar = () => {
             )}
             <div className="pt-3">
               <Button variant="gold" className="w-full" asChild>
-                <Link to="/contact" onClick={() => setIsOpen(false)}>Enroll Now</Link>
+                <a href="https://www.commerceeducators.com/courses" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>Enroll Now</a>
               </Button>
             </div>
           </div>

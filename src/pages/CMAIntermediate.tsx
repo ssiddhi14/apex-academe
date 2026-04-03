@@ -66,7 +66,7 @@ const CMAIntermediatePage = () => (
 
         <div className="text-center mt-12">
           <Button variant="gold" size="lg" asChild>
-            <Link to="/contact">Enroll Now <ArrowRight className="h-4 w-4 ml-1" /></Link>
+            <a href="https://www.commerceeducators.com/courses" target="_blank" rel="noopener noreferrer">Enroll Now <ArrowRight className="h-4 w-4 ml-1" /></a>
           </Button>
         </div>
       </div>
