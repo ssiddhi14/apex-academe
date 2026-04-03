@@ -232,7 +232,7 @@ const Index = () => {
             <p className="text-muted-foreground max-w-xl mx-auto mb-8">Join thousands of successful students. Get free counselling and book your demo class today.</p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button variant="gold" size="lg" className="text-base px-8" asChild>
-                <Link to="/contact">Enroll Now</Link>
+                <a href="https://www.commerceeducators.com/courses" target="_blank" rel="noopener noreferrer">Enroll Now</a>
               </Button>
               <Button variant="outline" size="lg" className="text-base px-8" asChild>
                 <a href="tel:+919876543210"><Phone className="h-4 w-4 mr-2" /> Call Us</a>

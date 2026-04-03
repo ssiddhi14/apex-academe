@@ -179,7 +179,7 @@ const Navbar = () => {
             )}
             <div className="pt-3">
               <Button variant="gold" className="w-full" asChild>
-                <Link to="/contact" onClick={() => setIsOpen(false)}>Enroll Now</Link>
+                <a href="https://www.commerceeducators.com/courses" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>Enroll Now</a>
               </Button>
             </div>
           </div>
