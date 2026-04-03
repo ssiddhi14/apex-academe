@@ -115,7 +115,7 @@ const Navbar = () => {
 
         <div className="hidden lg:flex items-center gap-3">
           <Button variant="gold" size="sm" asChild>
-            <Link to="/contact">Enroll Now</Link>
+            <a href="https://www.commerceeducators.com/courses" target="_blank" rel="noopener noreferrer">Enroll Now</a>
           </Button>
         </div>
 
