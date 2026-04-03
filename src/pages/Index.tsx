@@ -71,7 +71,7 @@ const HeroCarousel = () => {
           </motion.p>
           <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
             <Button variant="hero" size="lg" className="text-base px-8" asChild>
-              <Link to="/contact">Enroll Now <ArrowRight className="h-5 w-5 ml-1" /></Link>
+              <a href="https://www.commerceeducators.com/courses" target="_blank" rel="noopener noreferrer">Enroll Now <ArrowRight className="h-5 w-5 ml-1" /></a>
             </Button>
             <Button variant="hero-outline" size="lg" className="text-base px-8" asChild>
               <Link to="/contact">Book Free Demo</Link>
