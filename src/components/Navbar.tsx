@@ -41,7 +41,7 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-sm">
       {/* Top bar */}
       <div className="bg-primary">
-        <div className="container-main flex items-center justify-between py-2 px-4 text-sm text-primary-foreground/90">
+        <div className="container-main flex items-center py-2 px-4 text-sm text-primary-foreground/90">
           <div className="flex items-center gap-4">
             <a href="tel:+917737806700" className="flex items-center gap-1 hover:text-primary-foreground transition-colors">
               <Phone className="h-3 w-3" />
@@ -50,7 +50,6 @@ const Navbar = () => {
             <span className="hidden sm:inline">|</span>
             <span className="hidden sm:inline">Commerceeducators111@gmail.com</span>
           </div>
-          <div className="hidden md:block font-medium">Admissions Open for 2025-26 Batch!</div>
         </div>
       </div>
 

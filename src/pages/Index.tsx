@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { GraduationCap, BookOpen, Star, ChevronRight, Clock, CheckCircle, ArrowRight, ArrowLeft, Phone, ChevronLeft } from "lucide-react";
+import { GraduationCap, BookOpen, Star, ChevronRight, Clock, CheckCircle, ArrowRight, ChevronLeft, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import { slides } from "@/data/sliderData";
@@ -19,6 +19,20 @@ const courses = [
   { title: "CMA Foundation", desc: "Start your CMA journey with a strong foundation in management accounting fundamentals.", color: "bg-accent/10 text-accent", path: "/cma-foundation" },
   { title: "CMA Intermediate", desc: "Deepen your expertise in cost management, financial analysis, and strategic planning.", color: "bg-secondary/20 text-secondary-foreground", path: "/cma-intermediate" },
   { title: "CMA Final", desc: "Master advanced concepts and prepare for the ultimate CMA qualification.", color: "bg-primary/10 text-primary", path: "/cma-final" },
+];
+
+const aboutFeatures = [
+  { title: "100% Recorded Lectures", desc: "Learn anytime, anywhere" },
+  { title: "Unlimited Revision", desc: "Watch lectures multiple times" },
+  { title: "Concept Clarity Focus", desc: "No rote learning, only understanding" },
+  { title: "Exam-Oriented Preparation", desc: "Targeted for scoring marks" },
+  {
+    title: "Expert Faculty Guidance",
+    faculty: ["CA Akhilesh Maheshwari", "CS Disha Lohana"],
+  },
+  { title: "Practice Questions & Notes", desc: "Structured study material" },
+  { title: "Doubt Support", desc: "Quick resolution via WhatsApp/Telegram" },
+  { title: "Flexible Learning", desc: "Perfect for self-paced study" },
 ];
 
 const testimonials = [
@@ -67,13 +81,13 @@ const HeroCarousel = () => {
               <a href="https://www.commerceeducators.com/courses" target="_blank" rel="noopener noreferrer">Enroll Now <ArrowRight className="h-5 w-5 ml-1" /></a>
             </Button>
             <Button variant="hero-outline" size="lg" className="text-base px-8" asChild>
-              <Link to="/contact">Book Free Demo</Link>
+              <Link to="/contact">Watch Demo Lectures</Link>
             </Button>
           </motion.div>
           <motion.div variants={fadeInUp} className="mt-8 flex items-center gap-6 text-primary-foreground/70 text-sm">
             <span className="flex items-center gap-1"><CheckCircle className="h-4 w-4 text-secondary" /> Free Counselling</span>
             <span className="flex items-center gap-1"><CheckCircle className="h-4 w-4 text-secondary" /> Flexible Batches</span>
-            <span className="flex items-center gap-1"><CheckCircle className="h-4 w-4 text-secondary" /> Online + Offline</span>
+            <span className="flex items-center gap-1"><CheckCircle className="h-4 w-4 text-secondary" /> Recorded lectures</span>
           </motion.div>
         </motion.div>
       </div>
@@ -100,6 +114,68 @@ const Index = () => {
   return (
     <Layout>
       <HeroCarousel />
+
+      {/* About */}
+      <section className="section-padding bg-muted">
+        <div className="container-main">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center"
+          >
+            <motion.div variants={fadeInUp}>
+              <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent mb-4">
+                <Info className="h-4 w-4" /> About Us
+              </div>
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4 leading-tight">
+                Best Online CMA Coaching in India – Commerce Educators
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                At Commerce Educators, we provide high-quality online recorded CMA classes designed for students who want flexibility, conceptual clarity, and exam-focused preparation.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Whether you are preparing for CMA Intermediate or CMA Final, our courses help you study smarter, revise better, and perform confidently in exams.
+              </p>
+              <h3 className="text-lg font-heading font-semibold text-foreground mb-4">Key Features of Commerce Educators</h3>
+              <ul className="space-y-3">
+                {aboutFeatures.map((feature, i) => (
+                  <li key={i} className="flex gap-3 text-sm">
+                    <CheckCircle className="h-5 w-5 text-accent shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-medium text-foreground">{feature.title}</span>
+                      {feature.desc && (
+                        <span className="text-muted-foreground"> – {feature.desc}</span>
+                      )}
+                      {feature.faculty && (
+                        <ul className="mt-1.5 space-y-1 text-muted-foreground">
+                          {feature.faculty.map((name) => (
+                            <li key={name} className="pl-1">• {name}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            <motion.div variants={fadeInUp} className="w-full">
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-border shadow-lg bg-card">
+                <iframe
+                  src="https://www.youtube.com/embed/AotCL-v--4Q"
+                  title="Commerce Educators - Online CMA Coaching"
+                  className="absolute inset-0 w-full h-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Courses */}
       <section className="section-padding">
@@ -153,12 +229,12 @@ const Index = () => {
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { title: "Expert Faculty", desc: "Learn from CMA qualified professionals with 15+ years of teaching experience." },
-                { title: "Proven Track Record", desc: "95% success rate with 50+ All India Rankers in the last 5 years." },
-                { title: "Comprehensive Material", desc: "Well-structured study notes, practice papers, and mock tests aligned with exam patterns." },
-                { title: "Flexible Learning", desc: "Choose from offline, online live, or recorded classes to suit your schedule." },
+                { title: "Premium Study Resources", desc: "High Quality Content, Comprehensive Notes and Study Materials." },
+                { title: "Expert Faculty Guidance", desc: "Expert Guidance from experienced Educators." },
+                { title: "Result-Focused Learning", desc: "Result-Oriented Approach." },
+                { title: "Flexible Learning", desc: "Watch anytime , anywhere." },
                 { title: "Personal Mentorship", desc: "Dedicated mentors for doubt solving, strategy planning, and motivation." },
-                { title: "Affordable Fees", desc: "Quality education at competitive fees with EMI options and scholarships." },
+                { title: "24/7 Student Support", desc: "Personalized Guidance and 24/7 Support." },
               ].map((item, i) => (
                 <motion.div key={i} variants={fadeInUp} className="bg-card rounded-xl p-6 border border-border card-hover">
                   <div className="h-10 w-10 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
@@ -214,9 +290,9 @@ const Index = () => {
               <Button variant="gold" size="lg" className="text-base px-8" asChild>
                 <a href="https://www.commerceeducators.com/courses" target="_blank" rel="noopener noreferrer">Enroll Now</a>
               </Button>
-              <Button variant="outline" size="lg" className="text-base px-8" asChild>
+              {/* <Button variant="outline" size="lg" className="text-base px-8" asChild>
                 <a href="tel:+919876543210"><Phone className="h-4 w-4 mr-2" /> Call Us</a>
-              </Button>
+              </Button> */}
             </div>
           </motion.div>
         </div>
