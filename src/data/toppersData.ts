@@ -24,7 +24,7 @@ export interface Topper {
 }
 
 export const toppers: Topper[] = [
-  { name: "Anita Desai", rank: "AIR 1", exam: "CMA Intermediate, Dec 2024", quote: "Commerce Educators's structured approach and dedicated faculty made all the difference. I couldn't have done it without them.", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face" },
+  { name: "Anita Desai", rank: "AIR 1", exam: "CMA Intermediate, Dec 2024", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face" },
   { name: "Rohit Patel", rank: "AIR 2", exam: "CMA Final, June 2024", quote: "The mock tests and personalized mentoring helped me identify my weak areas and convert them into strengths.", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" },
   { name: "Priya Sharma", rank: "AIR 3", exam: "CMA Final, Dec 2024", quote: "The faculty at Commerce Educators are truly exceptional. Their passion for teaching is contagious.", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face" },
   { name: "Arjun Nair", rank: "AIR 5", exam: "CMA Foundation, Dec 2024", quote: "The comprehensive study material and regular tests kept me on track throughout my preparation.", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face" },

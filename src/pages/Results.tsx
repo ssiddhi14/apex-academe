@@ -24,7 +24,7 @@ const ResultsPage = () => {
       </section>
 
       {/* Stats Banner */}
-      <section className="bg-muted section-padding py-10">
+      {/* <section className="bg-muted section-padding py-10">
         <div className="container-main grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
           {[
             { val: "50+", label: "All India Rankers" },
@@ -38,7 +38,7 @@ const ResultsPage = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Toppers */}
       <section className="section-padding">

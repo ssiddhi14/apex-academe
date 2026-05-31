@@ -42,9 +42,10 @@ const ContactPage = () => {
               {[
                 { icon: Phone, title: "Phone", info: "+91 77378 06700", sub: "", href: "tel:+917737806700" },
                 { icon: Mail, title: "Email", info: "Commerceeducators111@gmail.com", sub: "", href: "mailto:Commerceeducators111@gmail.com" },
-                { icon: MapPin, title: "Address", info: "123 Education Lane", sub: "Knowledge Park, New Delhi - 110001" },
+                // { icon: MapPin, title: "Address", info: "123 Education Lane", sub: "Knowledge Park, New Delhi - 110001" },
                 { icon: Clock, title: "Office Hours", info: "Mon-Sat: 8 AM - 8 PM", sub: "Sunday: 9 AM - 2 PM" },
-              ].map((item, i) => (
+              ]
+              .map((item, i) => (
                 <div key={i} className="flex items-start gap-4 bg-card rounded-xl border border-border p-5 card-hover">
                   <div className="h-10 w-10 rounded-lg bg-accent/10 flex items-center justify-center shrink-0">
                     <item.icon className="h-5 w-5 text-accent" />
@@ -92,7 +93,7 @@ const ContactPage = () => {
             </motion.div>
           </div>
 
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="mt-12 rounded-2xl overflow-hidden border border-border h-[400px]">
+          {/* <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="mt-12 rounded-2xl overflow-hidden border border-border h-[400px]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.0!2d77.2!3d28.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM2JzAwLjAiTiA3N8KwMTInMDAuMCJF!5e0!3m2!1sen!2sin!4v1"
               width="100%"
@@ -103,7 +104,7 @@ const ContactPage = () => {
               referrerPolicy="no-referrer-when-downgrade"
               title="Commerce Educators Location"
             />
-          </motion.div>
+          </motion.div> */}
         </div>
       </section>
     </Layout>

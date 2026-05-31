@@ -140,13 +140,11 @@ const AboutPage = () => {
       </section>
 
       {/* Timeline */}
-      <section className="section-padding">
+      {/* <section className="section-padding">
         <div className="container-main max-w-3xl">
           <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="text-3xl font-heading font-bold text-foreground text-center mb-14">
-            Our Journey
           </motion.h2>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="relative">
-            {/* Vertical line */}
             <div className="absolute left-5 md:left-1/2 top-0 bottom-0 w-0.5 bg-border md:-translate-x-px" />
 
             {milestones.map((m, i) => (
@@ -155,15 +153,12 @@ const AboutPage = () => {
                 variants={fadeInUp}
                 className={`relative flex items-start mb-12 last:mb-0 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
               >
-                {/* Spacer for alternating side */}
                 <div className="hidden md:block md:w-1/2" />
 
-                {/* Dot */}
                 <div className="absolute left-5 md:left-1/2 -translate-x-1/2 h-10 w-10 rounded-full bg-accent flex items-center justify-center z-10 shadow-md">
                   <GraduationCap className="h-4 w-4 text-accent-foreground" />
                 </div>
 
-                {/* Card */}
                 <div className={`ml-14 md:ml-0 md:w-1/2 ${i % 2 === 0 ? "md:pr-10" : "md:pl-10"}`}>
                   <div className="bg-card rounded-xl border border-border p-5 card-hover">
                     <span className="text-xs font-bold text-accent">{m.year}</span>
@@ -174,10 +169,10 @@ const AboutPage = () => {
             ))}
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Achievements */}
-      <section className="section-padding bg-primary">
+      {/* <section className="section-padding bg-primary">
         <div className="container-main">
           <h2 className="text-3xl font-heading font-bold text-primary-foreground text-center mb-10">Achievements</h2>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
@@ -194,7 +189,7 @@ const AboutPage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </Layout>
   );
 };

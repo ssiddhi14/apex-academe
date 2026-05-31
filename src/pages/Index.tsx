@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { GraduationCap, Users, Trophy, BookOpen, Star, ChevronRight, Clock, CheckCircle, ArrowRight, ArrowLeft, Phone, ChevronLeft } from "lucide-react";
+import { GraduationCap, BookOpen, Star, ChevronRight, Clock, CheckCircle, ArrowRight, ArrowLeft, Phone, ChevronLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import { slides } from "@/data/sliderData";
@@ -15,17 +15,10 @@ const staggerContainer = {
   visible: { transition: { staggerChildren: 0.15 } },
 };
 
-const stats = [
-  { icon: Users, value: "15,000+", label: "Students Trained" },
-  { icon: Trophy, value: "95%", label: "Success Rate" },
-  { icon: BookOpen, value: "14+", label: "Years Experience" },
-  { icon: Star, value: "50+", label: "All India Rankers" },
-];
-
 const courses = [
-  { title: "CMA Foundation", duration: "8 Months", desc: "Start your CMA journey with a strong foundation in management accounting fundamentals.", color: "bg-accent/10 text-accent", path: "/cma-foundation" },
-  { title: "CMA Intermediate", duration: "12 Months", desc: "Deepen your expertise in cost management, financial analysis, and strategic planning.", color: "bg-secondary/20 text-secondary-foreground", path: "/cma-intermediate" },
-  { title: "CMA Final", duration: "12 Months", desc: "Master advanced concepts and prepare for the ultimate CMA qualification.", color: "bg-primary/10 text-primary", path: "/cma-final" },
+  { title: "CMA Foundation", desc: "Start your CMA journey with a strong foundation in management accounting fundamentals.", color: "bg-accent/10 text-accent", path: "/cma-foundation" },
+  { title: "CMA Intermediate", desc: "Deepen your expertise in cost management, financial analysis, and strategic planning.", color: "bg-secondary/20 text-secondary-foreground", path: "/cma-intermediate" },
+  { title: "CMA Final", desc: "Master advanced concepts and prepare for the ultimate CMA qualification.", color: "bg-primary/10 text-primary", path: "/cma-final" },
 ];
 
 const testimonials = [
@@ -107,19 +100,6 @@ const Index = () => {
   return (
     <Layout>
       <HeroCarousel />
-
-      {/* Stats */}
-      <section className="relative -mt-16 z-10 px-4">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer} className="container-main grid grid-cols-2 lg:grid-cols-4 gap-4">
-          {stats.map((stat, i) => (
-            <motion.div key={i} variants={fadeInUp} className="bg-card rounded-xl p-6 shadow-lg text-center card-hover border border-border">
-              <stat.icon className="h-8 w-8 mx-auto mb-3 text-accent" />
-              <div className="text-3xl font-heading font-extrabold text-foreground">{stat.value}</div>
-              <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
-      </section>
 
       {/* Courses */}
       <section className="section-padding">
