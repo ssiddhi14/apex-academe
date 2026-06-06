@@ -40,7 +40,7 @@ const ContactPage = () => {
           <div className="grid lg:grid-cols-3 gap-8">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="space-y-6">
               {[
-                { icon: Phone, title: "Phone", info: "+91 77378 06700", sub: "", href: "tel:+917737806700" },
+                { icon: Phone, title: "Phone", info: "+91 77378 06700 ", sub: "", href: "tel:+917737806700" },
                 { icon: Mail, title: "Email", info: "Commerceeducators111@gmail.com", sub: "", href: "mailto:Commerceeducators111@gmail.com" },
                 // { icon: MapPin, title: "Address", info: "123 Education Lane", sub: "Knowledge Park, New Delhi - 110001" },
                 { icon: Clock, title: "Office Hours", info: "Mon-Sat: 8 AM - 8 PM", sub: "Sunday: 9 AM - 2 PM" },
