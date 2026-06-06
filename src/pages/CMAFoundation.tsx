@@ -66,7 +66,7 @@ const CMAFoundationPage = () => (
 
         <div className="text-center mt-12">
           <Button variant="gold" size="lg" asChild>
-            <a href="https://www.commerceeducators.com/courses" target="_blank" rel="noopener noreferrer">Enroll Now <ArrowRight className="h-4 w-4 ml-1" /></a>
+            <a href="https://www.commerceeducators.com/courses" target="_blank" rel="noopener noreferrer">Coming Soon </a>
           </Button>
         </div>
       </div>
