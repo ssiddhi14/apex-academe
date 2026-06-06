@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, GraduationCap, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.jpeg";
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -56,9 +57,7 @@ const Navbar = () => {
       {/* Main nav */}
       <nav className="container-main flex items-center justify-between py-3 px-4">
         <Link to="/" className="flex items-center gap-2">
-          <div className="h-10 w-10 rounded-lg bg-primary flex items-center justify-center">
-            <GraduationCap className="h-6 w-6 text-primary-foreground" />
-          </div>
+          <img src={logo} alt="Commerce Educators Logo" className="h-10 w-10 rounded-lg object-contain bg-white" />
           <div>
             <span className="text-lg font-heading font-bold text-foreground">Commerce</span>
             <span className="text-sm block -mt-1 text-muted-foreground font-medium">Educators</span>

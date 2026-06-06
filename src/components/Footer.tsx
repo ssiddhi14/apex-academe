@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { GraduationCap, Phone, Mail, MapPin, Instagram, Youtube, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, Youtube, Send } from "lucide-react";
+import logo from "@/assets/logo.jpeg";
 
 const socialLinks = [
   {
@@ -27,16 +28,14 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="h-10 w-10 rounded-lg bg-secondary flex items-center justify-center">
-                <GraduationCap className="h-6 w-6 text-secondary-foreground" />
-              </div>
+              <img src={logo} alt="Commerce Educators Logo" className="h-10 w-10 rounded-lg object-contain bg-white" />
               <div>
                 <span className="text-lg font-heading font-bold">Commerce</span>
                 <span className="text-sm block -mt-1 text-primary-foreground/70">Educators</span>
               </div>
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
-              India's leading coaching institute for CMA aspirants. Transforming careers since 2010 with expert faculty and proven results.
+              India's leading coaching institute for CMA aspirants. Transforming careers with expert faculty and proven results.
             </p>
             <div className="flex gap-3 mt-4">
               {socialLinks.map(({ icon: Icon, href, label }) => (
@@ -92,10 +91,10 @@ const Footer = () => {
           <div>
             <h3 className="font-heading font-semibold text-lg mb-4">Contact Us</h3>
             <ul className="space-y-3 text-sm text-primary-foreground/70">
-              <li className="flex items-start gap-2">
+              {/* <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
                 123 Education Lane, Knowledge Park, New Delhi - 110001
-              </li>
+              </li> */}
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 shrink-0" />
                 <a href="tel:+917737806700" className="hover:text-secondary transition-colors">+91 77378 06700</a>
