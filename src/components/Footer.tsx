@@ -1,5 +1,23 @@
 import { Link } from "react-router-dom";
-import { GraduationCap, Phone, Mail, MapPin, Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
+import { GraduationCap, Phone, Mail, MapPin, Instagram, Youtube, Send } from "lucide-react";
+
+const socialLinks = [
+  {
+    icon: Send,
+    href: "https://t.me/commerceeducators",
+    label: "Telegram",
+  },
+  {
+    icon: Youtube,
+    href: "https://www.youtube.com/@commerceeducators111",
+    label: "YouTube",
+  },
+  {
+    icon: Instagram,
+    href: "https://www.instagram.com/commerce_educators_jpr?igsh=MWJzdXppdHNtaWNnYQ==",
+    label: "Instagram",
+  },
+];
 
 const Footer = () => {
   return (
@@ -21,8 +39,15 @@ const Footer = () => {
               India's leading coaching institute for CMA aspirants. Transforming careers since 2010 with expert faculty and proven results.
             </p>
             <div className="flex gap-3 mt-4">
-              {[Facebook, Instagram, Youtube, Linkedin].map((Icon, i) => (
-                <a key={i} href="#" className="h-9 w-9 rounded-full bg-primary-foreground/10 hover:bg-secondary/80 flex items-center justify-center transition-colors">
+              {socialLinks.map(({ icon: Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="h-9 w-9 rounded-full bg-primary-foreground/10 hover:bg-secondary/80 flex items-center justify-center transition-colors"
+                >
                   <Icon className="h-4 w-4" />
                 </a>
               ))}
@@ -74,6 +99,10 @@ const Footer = () => {
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 shrink-0" />
                 <a href="tel:+917737806700" className="hover:text-secondary transition-colors">+91 77378 06700</a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 shrink-0" />
+                <a href="tel:+917014860451" className="hover:text-secondary transition-colors">+91 70148 60451</a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 shrink-0" />

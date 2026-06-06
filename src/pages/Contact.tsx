@@ -40,7 +40,7 @@ const ContactPage = () => {
           <div className="grid lg:grid-cols-3 gap-8">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="space-y-6">
               {[
-                { icon: Phone, title: "Phone", info: "+91 77378 06700 ", sub: "", href: "tel:+917737806700" },
+                { icon: Phone, title: "Phone", info: "+91 77378 06700", sub: "+91 70148 60451", href: "tel:+917737806700", href2: "tel:+917014860451" },
                 { icon: Mail, title: "Email", info: "Commerceeducators111@gmail.com", sub: "", href: "mailto:Commerceeducators111@gmail.com" },
                 // { icon: MapPin, title: "Address", info: "123 Education Lane", sub: "Knowledge Park, New Delhi - 110001" },
                 { icon: Clock, title: "Office Hours", info: "Mon-Sat: 8 AM - 8 PM", sub: "Sunday: 9 AM - 2 PM" },
@@ -53,11 +53,15 @@ const ContactPage = () => {
                   <div>
                     <h3 className="font-heading font-semibold text-foreground text-sm">{item.title}</h3>
                     {item.href ? (
-                      <a href={item.href} className="text-sm text-muted-foreground hover:text-accent transition-colors">{item.info}</a>
+                      <a href={item.href} className="text-sm text-muted-foreground hover:text-accent transition-colors block">{item.info}</a>
                     ) : (
                       <p className="text-sm text-muted-foreground">{item.info}</p>
                     )}
-                    <p className="text-xs text-muted-foreground">{item.sub}</p>
+                    {item.href2 ? (
+                      <a href={item.href2} className="text-sm text-muted-foreground hover:text-accent transition-colors block">{item.sub}</a>
+                    ) : (
+                      <p className="text-xs text-muted-foreground">{item.sub}</p>
+                    )}
                   </div>
                 </div>
               ))}
