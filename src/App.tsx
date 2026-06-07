@@ -16,6 +16,7 @@ import CMAFoundation from "./pages/CMAFoundation";
 import CMAIntermediate from "./pages/CMAIntermediate";
 import CMAFinal from "./pages/CMAFinal";
 import NotFound from "./pages/NotFound";
+import FlyerPopup from "./components/FlyerPopup";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <FlyerPopup />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/courses" element={<Courses />} />

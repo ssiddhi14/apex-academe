@@ -7,6 +7,7 @@ import Layout from "@/components/Layout";
 import { founders } from "@/data/foundersData";
 import amPhoto from "@/assets/as.jpeg";
 import dlPhoto from "@/assets/dl.jpeg";
+import slider3 from "@/assets/slider-3.jpg";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -302,51 +303,42 @@ const AboutPage = () => {
       {/* ── CMA Intermediate Coaching ── */}
       <section className="section-padding overflow-hidden">
         <div className="container-main">
-          {/* Rich intro — two column */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-            className="rounded-2xl overflow-hidden mb-16 border border-border shadow-xl"
-          >
-            <div className="grid md:grid-cols-2">
-              {/* Left — gradient panel */}
-              <div className="gradient-hero p-10 md:p-14 flex flex-col justify-center relative overflow-hidden">
-                {/* decorative circles */}
-                <div className="absolute -top-12 -left-12 h-48 w-48 rounded-full bg-white/5" />
-                <div className="absolute -bottom-10 -right-10 h-64 w-64 rounded-full bg-white/5" />
-                <motion.span variants={fadeInUp} className="inline-block text-xs font-bold uppercase tracking-widest text-secondary mb-4">
-                  Online Coaching
-                </motion.span>
-                <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-heading font-extrabold text-primary-foreground leading-tight mb-5">
-                  CMA Intermediate<br />
-                  <span className="text-secondary">Online Coaching</span><br />
-                  <span className="text-primary-foreground/80 text-2xl font-semibold">by Commerce Educators</span>
-                </motion.h2>
-                <motion.p variants={fadeInUp} className="text-primary-foreground/75 text-sm leading-relaxed mb-6">
-                  CMA Intermediate is a crucial stage in the Cost and Management Accountant journey, where students develop advanced knowledge in accounting, taxation, financial management, cost management, auditing, and business laws.
-                </motion.p>
-                <motion.p variants={fadeInUp} className="text-primary-foreground/75 text-sm leading-relaxed">
-                  Our experienced faculty members combine practical industry insights with exam-oriented teaching methodologies to ensure students are fully prepared for the CMA Intermediate examination conducted by the Institute of Cost Accountants of India.
-                </motion.p>
-              </div>
 
-              {/* Right — features checklist */}
+          {/* Centered intro — same pattern as CMA Final */}
+          
+
+          {/* Why Choose — full width below intro */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="rounded-2xl overflow-hidden mb-12 border border-border shadow-xl">
+            <div className="grid md:grid-cols-2">
+              {/* Left — slider-3 image bg */}
+              <div
+                className="p-10 md:p-14 flex flex-col justify-center relative overflow-hidden min-h-[320px]"
+                style={{ backgroundImage: `url(${slider3})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+              >
+                {/* overlay */}
+                <div className="absolute inset-0 bg-primary/70" />
+                {/* decorative circles */}
+                <div className="absolute -top-12 -left-12 h-48 w-48 rounded-full bg-white/5 z-0" />
+                <div className="absolute -bottom-10 -right-10 h-64 w-64 rounded-full bg-white/5 z-0" />
+                {/* content above overlay */}
+                <div className="relative z-10">
+                  <motion.span variants={fadeInUp} className="inline-block text-xs font-bold uppercase tracking-widest text-secondary mb-4">
+                    Why Choose Us
+                  </motion.span>
+                  <motion.h3 variants={fadeInUp} className="text-2xl md:text-3xl font-heading font-extrabold text-white leading-tight mb-4">
+                    Why Choose<br />
+                    <span className="text-secondary">Commerce Educators</span>
+                  </motion.h3>
+                  <motion.p variants={fadeInUp} className="text-white/80 text-sm leading-relaxed">
+                    Success in CMA Intermediate requires more than just completing the syllabus. Our coaching focuses on concept clarity, practical application, and continuous performance improvement.
+                  </motion.p>
+                </div>
+              </div>
+              {/* Right — checklist */}
               <div className="bg-card p-10 md:p-14 flex flex-col justify-center">
-                <motion.h3 variants={fadeInUp} className="text-xl font-heading font-bold text-foreground mb-2">
-                  Why Choose Commerce Educators?
-                </motion.h3>
-                <motion.p variants={fadeInUp} className="text-sm text-muted-foreground mb-7 leading-relaxed">
-                  Success in CMA Intermediate requires more than just completing the syllabus. Our coaching focuses on concept clarity, practical application, and continuous improvement.
-                </motion.p>
                 <motion.ul variants={stagger} className="space-y-3">
                   {cmaIntermediateFeatures.map((feature, i) => (
-                    <motion.li
-                      key={i}
-                      variants={fadeInUp}
-                      className="flex items-center gap-3"
-                    >
+                    <motion.li key={i} variants={fadeInUp} className="flex items-center gap-3">
                       <span className="h-6 w-6 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
                         <CheckCircle2 className="h-3.5 w-3.5 text-accent" />
                       </span>
@@ -357,11 +349,25 @@ const AboutPage = () => {
               </div>
             </div>
           </motion.div>
-
-          {/* Subjects */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="max-w-3xl mx-auto text-center mb-12">
+            <motion.span variants={fadeInUp} className="inline-block text-xs font-semibold uppercase tracking-widest text-accent mb-3">
+              Online Coaching
+            </motion.span>
+            <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-heading font-extrabold text-foreground mb-4">
+              CMA Intermediate Online Coaching
+              <span className="block text-accent mt-1">by Commerce Educators</span>
+            </motion.h2>
+            <motion.p variants={fadeInUp} className="text-muted-foreground leading-relaxed mb-3">
+              CMA Intermediate is a crucial stage in the Cost and Management Accountant journey, where students develop advanced knowledge in accounting, taxation, financial management, cost management, auditing, and business laws.
+            </motion.p>
+            
+          </motion.div>
+          {/* Subjects heading */}
           <motion.h3 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="text-2xl font-heading font-bold text-foreground text-center mb-10">
             Subjects Covered in CMA Intermediate
           </motion.h3>
+
+          {/* Subject group cards */}
           {cmaIntermediateSubjects.map((group, gi) => (
             <motion.div key={gi} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="mb-10">
               <motion.div variants={fadeInUp} className="flex items-center gap-3 mb-5">
