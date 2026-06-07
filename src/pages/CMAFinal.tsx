@@ -23,15 +23,13 @@ const subjectGroups = [
         title: "Corporate and Economic Laws",
         videoId: "Jpsbcj1tF6Q",
         description:
-          "Understand advanced corporate laws, economic regulations, governance frameworks, and legal compliance requirements applicable in modern businesses.",
-      },
+        "Strengthen your understanding of corporate and regulatory frameworks with our CMA Final Corporate and Economic Laws course. This paper covers the Companies Act, 2013, Insolvency and Bankruptcy Code (IBC), Corporate Governance, Sustainability, SEBI Regulations, Competition Act, FEMA and key laws governing banking, insurance and MSME sectors. Students also gain insights into Cyber Security, Data Privacy and Anti-Money Laundering regulations. The course focuses on conceptual clarity, practical interpretation of legal provisions and exam-oriented preparation through case-based discussions, amendments and previous examination questions. Comprehensive coverage and structured learning help students build confidence for CMA Final examinations and professional practice."      },
       {
         code: "Paper 14",
         title: "Strategic Financial Management (SFM)",
         videoId: "sNiasve8ZlQ",
         description:
-          "Develop expertise in investment decisions, portfolio management, derivatives, risk management, international finance, mergers and acquisitions, and corporate restructuring.",
-      },
+        "Master advanced financial decision-making with our CMA Final Strategic Financial Management course. This paper covers Investment Decisions, Capital Budgeting, Project Evaluation, Security Analysis, Portfolio Management, Asset Pricing Theories and Financial Risk Management. Students also gain expertise in Derivatives, International Financial Management, Foreign Exchange Markets and Digital Finance. The course focuses on conceptual clarity, analytical thinking and practical application of financial strategies through comprehensive numerical problem-solving and exam-oriented discussions. With structured learning, previous examination question practice and revision support, students develop the skills required to excel in CMA Final examinations and make effective strategic financial decisions in professional practice."      },
     ],
   },
   {
@@ -42,22 +40,19 @@ const subjectGroups = [
         title: "Cost and Management Audit (CMAD)",
         videoId: "M7rISUq91-U",
         description:
-          "Understand audit procedures, internal controls, compliance auditing, management auditing, and professional reporting standards.",
-      },
+        "Develop expertise in Cost Audit, Management Audit and Internal Audit with our CMA Final Paper 17 course. This paper covers Cost Audit procedures, Cost Accounting Standards, Cost Audit Reports, Management Audit, Internal Control Systems, Operational Audit and Information Systems Security Audit. Students also gain practical knowledge of Forensic Audit and Anti-Money Laundering regulations, which are increasingly important in today’s business environment. The course focuses on conceptual clarity, professional application and exam-oriented preparation through practical illustrations, case studies and previous examination questions. Comprehensive coverage and structured learning help students build confidence for CMA Final examinations and professional audit assignments."      },
       {
         code: "Paper 18",
         title: "Corporate Financial Reporting (CFR)",
         videoId: "n9liLqAwEY8",
         description:
-          "Gain in-depth knowledge of financial reporting standards, Ind AS, consolidated financial statements, and corporate disclosure requirements.",
-      },
+        "Master advanced financial reporting concepts with our CMA Final Corporate Financial Reporting course. This paper covers Indian Accounting Standards (Ind AS), Valuation of Shares, Financial Instruments, NBFC Accounting and Reporting, Business Combinations, Corporate Restructuring and Consolidated Financial Statements. Students also gain an understanding of recent developments in financial reporting and Government Accounting in India. The course focuses on conceptual clarity, practical application and exam-oriented preparation through comprehensive illustrations, case studies and previous examination questions. With structured learning and revision support, students develop the expertise required to excel in CMA Final examinations and handle complex corporate reporting requirements confidently."      },
       {
         code: "Paper 20A",
         title: "Strategic Performance Management and Business Valuation",
         videoId: "iOclv6W8cpA",
         description:
-          "Develop skills in business performance evaluation, value creation, business valuation models, and strategic decision-making frameworks.",
-      },
+        "Enhance your strategic decision-making and valuation expertise with our CMA Final Strategic Performance Management and Business Valuation course. This paper covers Performance Measurement, Performance Evaluation, Enterprise Risk Management, Business Valuation Methods, Valuation of Assets and Liabilities, and Valuation in Mergers and Acquisitions. Students gain practical insights into analysing business performance, improving organisational efficiency and determining business value using professional valuation techniques. The course focuses on conceptual clarity, practical application and exam-oriented preparation through case studies, numerical problem-solving and previous examination questions. Comprehensive coverage and structured learning help students excel in CMA Final examinations and develop skills relevant to finance, consulting and valuation professionals."      },
     ],
   },
 ];

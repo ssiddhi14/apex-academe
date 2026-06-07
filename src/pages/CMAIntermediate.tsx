@@ -23,15 +23,13 @@ const subjectGroups = [
         title: "Laws and Ethics",
         videoId: "Euu2dhFGDlo",
         description:
-          "Understand business laws, corporate regulations, governance principles, and ethical practices relevant to professional accountants.",
-      },
+        "Develop a strong understanding of legal and ethical principles with our CMA Intermediate Laws and Ethics course. This paper covers Commercial Laws, Industrial Laws, Corporate Laws and Business Ethics as per the latest CMA syllabus. Students learn important concepts under the Indian Contract Act, Sale of Goods Act, Partnership Act, LLP Act, Labour Laws and Companies Act, 2013. The course focuses on conceptual clarity, practical applications and exam-oriented preparation through simplified explanations, illustrations and previous examination questions. With structured learning, revision support and answer-writing guidance, students can build confidence and improve their performance in CMA Intermediate examinations."      },
       {
         code: "Paper 6",
         title: "Financial Accounting",
         videoId: "g7ox7IQskQE",
         description:
-          "Develop expertise in accounting standards, preparation of financial statements, branch accounting, and corporate accounting concepts.",
-      },
+        "Build a strong foundation in accounting with our CMA Intermediate Financial Accounting course. This paper covers Accounting Fundamentals, Bills of Exchange, Consignment Accounts, Joint Venture Accounts, Final Accounts, Partnership Accounting, Lease Accounting, Branch and Departmental Accounts, Insurance Claims, Hire Purchase Transactions and Accounting Standards. The course focuses on conceptual clarity, practical problem-solving and exam-oriented preparation through detailed illustrations and previous examination questions. Students gain a thorough understanding of accounting principles, financial statement preparation and accounting standards, helping them develop confidence in solving practical questions and achieving success in CMA Intermediate examinations."      },
     ],
   },
   {
@@ -42,15 +40,13 @@ const subjectGroups = [
         title: "Corporate Accounting and Auditing",
         videoId: "t5S3n3GXSwA",
         description:
-          "Gain knowledge of advanced accounting topics, corporate financial reporting, and auditing procedures.",
-      },
+        "Master Corporate Accounting and Auditing with our CMA Intermediate Paper 10 course. This paper covers Accounting for Shares and Debentures, Financial Statements as per Schedule III, Cash Flow Statements, Banking, Insurance and Electricity Company Accounts, Accounting Standards and Auditing concepts. Students also gain a strong understanding of audit procedures, Companies Act audit provisions and auditing of different types of undertakings. The course focuses on conceptual clarity, practical problem-solving and exam-oriented preparation through detailed illustrations, previous examination questions and revision support, helping students build confidence and achieve success in CMA Intermediate examinations."      },
       {
         code: "Paper 11",
         title: "Financial Management and Business Data Analytics",
         videoId: "u3zDLyUeGJE",
         description:
-          "Understand capital budgeting, working capital management, investment decisions, risk analysis, and business analytics techniques.",
-      },
+        "Develop strong financial decision-making and analytical skills with our CMA Intermediate Financial Management and Business Data Analytics course. This paper covers Financial Management fundamentals, Financial Markets, Financial Analysis, Cost of Capital, Capital Budgeting, Working Capital Management and Financing Decisions. Students also learn Business Data Analytics concepts including Data Processing, Data Visualization, Data Analysis and Business Decision-Making. The course focuses on conceptual clarity, practical problem-solving and exam-oriented preparation through detailed illustrations, case-based discussions and previous examination questions. With comprehensive coverage of the latest CMA syllabus, students gain the confidence to solve numerical and analytical questions effectively in examinations."      },
     ],
   },
 ];
