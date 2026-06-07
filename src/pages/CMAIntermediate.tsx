@@ -166,15 +166,29 @@ const CMAIntermediatePage = () => (
             </motion.div>
             <div className="grid md:grid-cols-2 gap-5">
               {group.papers.map((paper, pi) => (
-                <motion.div key={pi} variants={fadeInUp} className="bg-card rounded-xl border border-border p-6 card-hover">
-                  <div className="flex items-start gap-4">
-                    <div className="h-10 w-10 rounded-lg bg-secondary/20 flex items-center justify-center shrink-0">
-                      <BookOpen className="h-5 w-5 text-secondary-foreground" />
-                    </div>
-                    <div>
-                      <span className="text-xs font-semibold text-accent uppercase tracking-wider">{paper.code}</span>
-                      <h4 className="text-base font-heading font-bold text-foreground mt-0.5 mb-2">{paper.title}</h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{paper.description}</p>
+                <motion.div key={pi} variants={fadeInUp} className="bg-card rounded-xl border border-border overflow-hidden card-hover">
+                  {/* Embedded video */}
+                  <div className="relative w-full aspect-video bg-muted">
+                    <iframe
+                      src="https://www.youtube.com/embed/ph-W8Ew52yA"
+                      title={paper.title}
+                      className="absolute inset-0 w-full h-full rounded-t-xl"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    />
+                  </div>
+                  {/* Card content */}
+                  <div className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="h-10 w-10 rounded-lg bg-secondary/20 flex items-center justify-center shrink-0">
+                        <BookOpen className="h-5 w-5 text-secondary-foreground" />
+                      </div>
+                      <div>
+                        <span className="text-xs font-semibold text-accent uppercase tracking-wider">{paper.code}</span>
+                        <h4 className="text-base font-heading font-bold text-foreground mt-0.5 mb-2">{paper.title}</h4>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{paper.description}</p>
+                      </div>
                     </div>
                   </div>
                 </motion.div>
