@@ -12,22 +12,22 @@ const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } }
 
 const subjects = [
   {
-    title: "Fundamentals of Economics",
+    title: "Business Laws and Business Communication",
     description:
       "Understand micro and macroeconomic concepts, national income, money & banking, and Indian economic policies essential for management accounting professionals.",
   },
   {
-    title: "Fundamentals of Accounting",
+    title: "Financial and Cost Accounting ",
     description:
       "Master the principles of double-entry bookkeeping, preparation of financial statements, accounting standards, and rectification of errors.",
   },
   {
-    title: "Business Laws",
+    title: "Business Mathematics and Statistics ",
     description:
       "Learn the Indian Contract Act, Sale of Goods Act, Negotiable Instruments Act, and other commercial laws critical for business compliance.",
   },
   {
-    title: "Quantitative Aptitude",
+    title: "Business Economics and Management",
     description:
       "Build strong foundations in arithmetic, algebra, statistics, and probability to solve complex business and financial problems effectively.",
   },

@@ -36,13 +36,13 @@ const aboutFeatures = [
 ];
 
 const testimonials = [
-  { name: "Kunal Chamoli",    rank: "AIR 26, CMA Final",        avatar: "PS", text: "Commerce Educators is one of the best platforms for CMA Intermediate and CMA Final preparation. The faculty focuses on conceptual clarity, exam-oriented teaching, and practical understanding of subjects. The study material, regular guidance, and doubt-solving support make the learning process smooth and effective. I highly recommend Commerce Educators to CMA students looking for quality professional coaching." },
-  { name: "Kanika Dangayech",     rank: "AIR 3, CMA Intermediate", avatar: "AD", text: "CA Akhilesh Maheshwari Sir is an exceptional faculty for Financial Management, Accounts, CFR, and SFM. His teaching style makes complex concepts easy to understand through practical examples and exam-focused discussions. The way he explains numerical problems has significantly improved my confidence in CMA examinations." },
-  { name: "Deshna Jain",      rank: "AIR 5, CMA Foundation",  avatar: "AN", text: "CS Disha Lohana Ma'am is an excellent teacher for Law and Audit. She simplifies difficult theoretical concepts and helps students understand provisions in a practical and memorable manner. Her teaching approach, revision guidance, and exam-writing strategies make theory subjects much easier to score in." },
-  { name: "Madhav Sarda",     rank: "AIR 2, CMA Final",        avatar: "RP", text: "I am currently preparing for CMA Intermediate with Commerce Educators, and my experience has been outstanding. The classes are highly interactive, concept-driven, and focused on examination requirements. The faculty ensures that every student understands the fundamentals before moving to advanced topics. I strongly recommend Commerce Educators for CMA Inter preparation." },
-  { name: "Kajal Agarwal",     rank: "AIR 7, CMA Foundation",   avatar: "SR", text: "Commerce Educators provides excellent coaching for CMA Final students. The classes are well-structured, and the faculty covers every topic in detail with a strong focus on conceptual understanding and exam preparation. The guidance provided for subjects like SFM, CFR, Audit, and Law has been extremely valuable for my studies." },
-  { name: "shiv Tailor",  rank: "AIR 10, CMA Inter",       avatar: "KM", text: "The online learning experience at Commerce Educators is excellent. The recorded lectures, regular revisions, and doubt-solving support help students learn at their own pace. Even complex CMA subjects become manageable because of the faculty's clear explanations and practical teaching methods." },
-  { name: "Shavika Mangal",      rank: "AIR 12, CMA Final",       avatar: "MI", text: "What makes Commerce Educators stand out is its exam-oriented teaching approach. The faculty not only teaches concepts but also guides students on presentation techniques, revision strategies, and question-solving methods. This has helped me prepare more effectively for CMA Intermediate and CMA Final examinations." },
+  { name: "Kunal Chamoli",    rank: "AIR 26",        avatar: "KC", text: "Commerce Educators is one of the best platforms for CMA Intermediate and CMA Final preparation. The faculty focuses on conceptual clarity, exam-oriented teaching, and practical understanding of subjects. The study material, regular guidance, and doubt-solving support make the learning process smooth and effective. I highly recommend Commerce Educators to CMA students looking for quality professional coaching." },
+  { name: "Kanika Dangayech",     rank: "AIR 3", avatar: "KD", text: "CA Akhilesh Maheshwari Sir is an exceptional faculty for Financial Management, Accounts, CFR, and SFM. His teaching style makes complex concepts easy to understand through practical examples and exam-focused discussions. The way he explains numerical problems has significantly improved my confidence in CMA examinations." },
+  { name: "Deshna Jain",      rank: "AIR 5",  avatar: "DJ", text: "CS Disha Lohana Ma'am is an excellent teacher for Law and Audit. She simplifies difficult theoretical concepts and helps students understand provisions in a practical and memorable manner. Her teaching approach, revision guidance, and exam-writing strategies make theory subjects much easier to score in." },
+  { name: "Madhav Sarda",     rank: "",        avatar: "MS", text: "I am currently preparing for CMA Intermediate with Commerce Educators, and my experience has been outstanding. The classes are highly interactive, concept-driven, and focused on examination requirements. The faculty ensures that every student understands the fundamentals before moving to advanced topics. I strongly recommend Commerce Educators for CMA Inter preparation." },
+  { name: "Kajal Agarwal",     rank: "",   avatar: "KA", text: "Commerce Educators provides excellent coaching for CMA Final students. The classes are well-structured, and the faculty covers every topic in detail with a strong focus on conceptual understanding and exam preparation. The guidance provided for subjects like SFM, CFR, Audit, and Law has been extremely valuable for my studies." },
+  { name: "shiv Tailor",  rank: "",       avatar: "ST", text: "The online learning experience at Commerce Educators is excellent. The recorded lectures, regular revisions, and doubt-solving support help students learn at their own pace. Even complex CMA subjects become manageable because of the faculty's clear explanations and practical teaching methods." },
+  { name: "Shavika Mangal",      rank: "",       avatar: "SM", text: "What makes Commerce Educators stand out is its exam-oriented teaching approach. The faculty not only teaches concepts but also guides students on presentation techniques, revision strategies, and question-solving methods. This has helped me prepare more effectively for CMA Intermediate and CMA Final examinations." },
 ];
 
 const HeroCarousel = () => {
@@ -64,7 +64,6 @@ const HeroCarousel = () => {
           className={`absolute inset-0 transition-opacity duration-700 ${i === current ? "opacity-100" : "opacity-0"}`}
         >
           <img src={slide.src} alt={slide.alt} className="w-full h-full object-cover object-center" width={1920} height={380} />
-          <div className="absolute inset-0 gradient-hero opacity-80" />
         </div>
       ))}
 
@@ -274,7 +273,7 @@ const Index = () => {
 
           <div className="text-center mt-10">
             <Button variant="default" size="lg" asChild>
-              <Link to="/courses">View All Courses <ArrowRight className="h-4 w-4 ml-2" /></Link>
+              <Link to="https://clpmarshal.page.link/yzNn">Enroll Now <ArrowRight className="h-4 w-4 ml-2" /></Link>
             </Button>
           </div>
         </div>

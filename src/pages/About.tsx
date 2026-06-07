@@ -18,9 +18,9 @@ const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.1 } } 
 const faculty = [
   {
     name: "CA Akhilesh Maheshwari",
-    title: "Chartered Accountant & Senior Faculty",
+    title: "Chartered Accountant , Educator & Founder",
     photo: amPhoto,
-    qualifications: ["Qualified CA (2014)", "NET Qualified", "Practicing Chartered Accountant"],
+    qualifications: ["Qualified CA ", "NET Qualified", "Practicing Chartered Accountant"],
     experience: "12+ Years of Teaching Experience",
     bio: [
       "CA Akhilesh Maheshwari is a qualified Chartered Accountant who completed his CA qualification in 2014. He is also NET (National Eligibility Test) qualified, demonstrating his strong academic foundation and commitment to excellence in education.",
@@ -31,11 +31,11 @@ const faculty = [
     quote: "My objective is simple – to make learning easier, concepts stronger, and success achievable for every student.",
     subjects: [
       {
-        level: "CA / CMA Final",
+        level: " CMA Final",
         list: ["Strategic Financial Management (SFM)", "Corporate Financial Reporting (CFR)", "Business Valuation (BV)"],
       },
       {
-        level: "CA / CMA Intermediate",
+        level: " CMA Intermediate",
         list: ["Financial Accounting", "Corporate Accounting", "Financial Management"],
       },
     ],
@@ -46,9 +46,9 @@ const faculty = [
     photo: dlPhoto,
     qualifications: [
       "Qualified Company Secretary",
-      "AIR 14 — CS Foundation",
-      "AIR 3 — CS Executive",
-      "AIR 5 — CS Professional",
+      "AIR 14 - CS Foundation",
+      "AIR 3 - CS Executive",
+      "AIR 5 - CS Professional",
       "Founder, Commerce Educators",
     ],
     experience: "12+ Years of Teaching Experience",
@@ -62,12 +62,12 @@ const faculty = [
     quote: "Every student has the potential to succeed when provided with the right guidance, strategy, and support.",
     subjects: [
       {
-        level: "CA / CMA Final",
-        list: ["Corporate and Economic Laws", "Strategic Performance Management", "Cost and Management Audit (CMAD)"],
+        level: "CMA Final",
+        list: ["Corporate and Economic Laws",  "Cost and Management Audit (CMAD)"],
       },
       {
-        level: "CA / CMA Intermediate",
-        list: ["Laws and Ethics", "Corporate Accounting and Auditing", "Business Data Analytics"],
+        level: "CMA Intermediate",
+        list: ["Laws and Ethics", "Corporate Accounting and Auditing"],
       },
     ],
   },
@@ -330,14 +330,14 @@ const AboutPage = () => {
                 {/* content above overlay */}
                 <div className="relative z-10">
                   <motion.span variants={fadeInUp} className="inline-block text-xs font-bold uppercase tracking-widest text-secondary mb-4">
-                    Why Choose Us
+                    Why Choose
                   </motion.span>
                   <motion.h3 variants={fadeInUp} className="text-2xl md:text-3xl font-heading font-extrabold text-white leading-tight mb-4">
-                    Why Choose<br />
-                    <span className="text-secondary">Commerce Educators</span>
+                    COMMERCE&nbsp;&nbsp;&nbsp;EDUCATORS <br />
+                    {/* <span className="text-secondary">Commerce Educators</span> */}
                   </motion.h3>
                   <motion.p variants={fadeInUp} className="text-white/80 text-sm leading-relaxed">
-                    Success in CMA Intermediate requires more than just completing the syllabus. Our coaching focuses on concept clarity, practical application, and continuous performance improvement.
+                    Success in CMA requires more than just completing the syllabus. Our coaching focuses on concept clarity, practical application, and continuous performance improvement.
                   </motion.p>
                 </div>
               </div>
