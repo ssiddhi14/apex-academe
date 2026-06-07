@@ -36,9 +36,13 @@ const aboutFeatures = [
 ];
 
 const testimonials = [
-  { name: "Priya Sharma", rank: "AIR 3, CMA Final", text: "Commerce Educators transformed my preparation. The faculty's dedication and structured approach helped me secure All India Rank 3.", avatar: "PS" },
-  { name: "Anita Desai", rank: "AIR 1, CMA Inter", text: "I owe my success to Commerce Educators. The personalized attention and rigorous practice tests made all the difference.", avatar: "AD" },
-  { name: "Arjun Nair", rank: "AIR 10, CMA Foundation", text: "The comprehensive study material and regular tests kept me on track throughout my preparation.", avatar: "AN" },
+  { name: "Kunal Chamoli",    rank: "AIR 26, CMA Final",        avatar: "PS", text: "Commerce Educators is one of the best platforms for CMA Intermediate and CMA Final preparation. The faculty focuses on conceptual clarity, exam-oriented teaching, and practical understanding of subjects. The study material, regular guidance, and doubt-solving support make the learning process smooth and effective. I highly recommend Commerce Educators to CMA students looking for quality professional coaching." },
+  { name: "Kanika Dangayech",     rank: "AIR 3, CMA Intermediate", avatar: "AD", text: "CA Akhilesh Maheshwari Sir is an exceptional faculty for Financial Management, Accounts, CFR, and SFM. His teaching style makes complex concepts easy to understand through practical examples and exam-focused discussions. The way he explains numerical problems has significantly improved my confidence in CMA examinations." },
+  { name: "Deshna Jain",      rank: "AIR 5, CMA Foundation",  avatar: "AN", text: "CS Disha Lohana Ma'am is an excellent teacher for Law and Audit. She simplifies difficult theoretical concepts and helps students understand provisions in a practical and memorable manner. Her teaching approach, revision guidance, and exam-writing strategies make theory subjects much easier to score in." },
+  { name: "Madhav Sarda",     rank: "AIR 2, CMA Final",        avatar: "RP", text: "I am currently preparing for CMA Intermediate with Commerce Educators, and my experience has been outstanding. The classes are highly interactive, concept-driven, and focused on examination requirements. The faculty ensures that every student understands the fundamentals before moving to advanced topics. I strongly recommend Commerce Educators for CMA Inter preparation." },
+  { name: "Kajal Agarwal",     rank: "AIR 7, CMA Foundation",   avatar: "SR", text: "Commerce Educators provides excellent coaching for CMA Final students. The classes are well-structured, and the faculty covers every topic in detail with a strong focus on conceptual understanding and exam preparation. The guidance provided for subjects like SFM, CFR, Audit, and Law has been extremely valuable for my studies." },
+  { name: "shiv Tailor",  rank: "AIR 10, CMA Inter",       avatar: "KM", text: "The online learning experience at Commerce Educators is excellent. The recorded lectures, regular revisions, and doubt-solving support help students learn at their own pace. Even complex CMA subjects become manageable because of the faculty's clear explanations and practical teaching methods." },
+  { name: "Shavika Mangal",      rank: "AIR 12, CMA Final",       avatar: "MI", text: "What makes Commerce Educators stand out is its exam-oriented teaching approach. The faculty not only teaches concepts but also guides students on presentation techniques, revision strategies, and question-solving methods. This has helped me prepare more effectively for CMA Intermediate and CMA Final examinations." },
 ];
 
 const HeroCarousel = () => {
@@ -81,6 +85,89 @@ const HeroCarousel = () => {
         ))}
       </div>
     </section>
+  );
+};
+
+const TestimonialCarousel = () => {
+  const [current, setCurrent] = useState(0);
+  const total = testimonials.length;
+
+  const next = useCallback(() => setCurrent((p) => (p + 1) % total), [total]);
+  const prev = useCallback(() => setCurrent((p) => (p - 1 + total) % total), [total]);
+
+  // Auto-advance every 4 seconds
+  useEffect(() => {
+    const timer = setInterval(next, 4000);
+    return () => clearInterval(timer);
+  }, [next]);
+
+  // Show 3 cards at a time on desktop, 1 on mobile
+  const getVisible = () => {
+    return [0, 1, 2].map((offset) => testimonials[(current + offset) % total]);
+  };
+
+  return (
+    <div className="relative">
+      {/* Cards */}
+      <div className="grid md:grid-cols-3 gap-6 overflow-hidden">
+        {getVisible().map((t, i) => (
+          <motion.div
+            key={`${current}-${i}`}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: i * 0.08 }}
+            className="glass rounded-xl p-6 flex flex-col"
+          >
+            <div className="flex items-center gap-1 mb-3">
+              {[...Array(5)].map((_, j) => (
+                <Star key={j} className="h-4 w-4 fill-secondary text-secondary" />
+              ))}
+            </div>
+            <p className="text-primary-foreground/90 text-sm leading-relaxed mb-5 flex-1">"{t.text}"</p>
+            <div className="flex items-center gap-3 mt-auto">
+              <div className="h-10 w-10 rounded-full bg-secondary flex items-center justify-center text-sm font-bold text-secondary-foreground shrink-0">
+                {t.avatar}
+              </div>
+              <div>
+                <div className="font-semibold text-primary-foreground text-sm">{t.name}</div>
+                <div className="text-xs text-secondary">{t.rank}</div>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Controls */}
+      <div className="flex items-center justify-center gap-4 mt-8">
+        <button
+          onClick={prev}
+          className="h-9 w-9 rounded-full bg-primary-foreground/10 hover:bg-secondary/80 flex items-center justify-center transition-colors"
+          aria-label="Previous"
+        >
+          <ChevronLeft className="h-5 w-5 text-primary-foreground" />
+        </button>
+
+        {/* Dot indicators */}
+        <div className="flex gap-2">
+          {testimonials.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`h-2 rounded-full transition-all duration-300 ${i === current ? "w-6 bg-secondary" : "w-2 bg-primary-foreground/30"}`}
+              aria-label={`Go to testimonial ${i + 1}`}
+            />
+          ))}
+        </div>
+
+        <button
+          onClick={next}
+          className="h-9 w-9 rounded-full bg-primary-foreground/10 hover:bg-secondary/80 flex items-center justify-center transition-colors"
+          aria-label="Next"
+        >
+          <ChevronRight className="h-5 w-5 text-primary-foreground" />
+        </button>
+      </div>
+    </div>
   );
 };
 
@@ -223,34 +310,17 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="section-padding bg-primary">
+      {/* Testimonials — auto-scroll carousel */}
+      <section className="section-padding bg-primary overflow-hidden">
         <div className="container-main">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer}>
             <motion.div variants={fadeInUp} className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary-foreground mb-4">Student Success Stories</h2>
               <p className="text-primary-foreground/70 max-w-2xl mx-auto">Hear from our achievers who cracked CMA exams with top ranks.</p>
             </motion.div>
-            <div className="grid md:grid-cols-3 gap-6">
-              {testimonials.map((t, i) => (
-                <motion.div key={i} variants={fadeInUp} className="glass rounded-xl p-6">
-                  <div className="flex items-center gap-1 mb-3">
-                    {[...Array(5)].map((_, j) => (
-                      <Star key={j} className="h-4 w-4 fill-secondary text-secondary" />
-                    ))}
-                  </div>
-                  <p className="text-primary-foreground/90 text-sm leading-relaxed mb-4">"{t.text}"</p>
-                  <div className="flex items-center gap-3">
-                    <div className="h-10 w-10 rounded-full bg-secondary flex items-center justify-center text-sm font-bold text-secondary-foreground">{t.avatar}</div>
-                    <div>
-                      <div className="font-semibold text-primary-foreground text-sm">{t.name}</div>
-                      <div className="text-xs text-secondary">{t.rank}</div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
           </motion.div>
+
+          <TestimonialCarousel />
         </div>
       </section>
 

@@ -21,12 +21,14 @@ const subjectGroups = [
       {
         code: "Paper 5",
         title: "Laws and Ethics",
+        videoId: "Euu2dhFGDlo",
         description:
           "Understand business laws, corporate regulations, governance principles, and ethical practices relevant to professional accountants.",
       },
       {
         code: "Paper 6",
         title: "Financial Accounting",
+        videoId: "g7ox7IQskQE",
         description:
           "Develop expertise in accounting standards, preparation of financial statements, branch accounting, and corporate accounting concepts.",
       },
@@ -38,12 +40,14 @@ const subjectGroups = [
       {
         code: "Paper 10",
         title: "Corporate Accounting and Auditing",
+        videoId: "t5S3n3GXSwA",
         description:
           "Gain knowledge of advanced accounting topics, corporate financial reporting, and auditing procedures.",
       },
       {
         code: "Paper 11",
         title: "Financial Management and Business Data Analytics",
+        videoId: "u3zDLyUeGJE",
         description:
           "Understand capital budgeting, working capital management, investment decisions, risk analysis, and business analytics techniques.",
       },
@@ -167,17 +171,32 @@ const CMAIntermediatePage = () => (
             <div className="grid md:grid-cols-2 gap-5">
               {group.papers.map((paper, pi) => (
                 <motion.div key={pi} variants={fadeInUp} className="bg-card rounded-xl border border-border overflow-hidden card-hover">
-                  {/* Embedded video */}
-                  <div className="relative w-full aspect-video bg-muted">
-                    <iframe
-                      src="https://www.youtube.com/embed/ph-W8Ew52yA"
-                      title={paper.title}
-                      className="absolute inset-0 w-full h-full rounded-t-xl"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      allowFullScreen
+                  {/* Clickable YouTube thumbnail */}
+                  <a
+                    href={`https://www.youtube.com/watch?v=${paper.videoId}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block relative w-full aspect-video bg-black group"
+                  >
+                    <img
+                      src={`https://img.youtube.com/vi/${paper.videoId}/hqdefault.jpg`}
+                      alt={paper.title}
+                      className="w-full h-full object-cover opacity-90 group-hover:opacity-70 transition-opacity"
                     />
-                  </div>
+                    {/* Play button overlay */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="h-14 w-14 rounded-full bg-red-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                        <svg className="h-6 w-6 text-white ml-1" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                    </div>
+                    {/* YouTube badge */}
+                    <div className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-0.5 rounded flex items-center gap-1">
+                      <svg className="h-3 w-3 text-red-500" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2s-.2-1.6-.9-2.3c-.9-1-1.9-1-2.3-1C17.2 2.7 12 2.7 12 2.7s-5.2 0-8.3.2c-.5.1-1.4.1-2.3 1-.7.7-.9 2.3-.9 2.3S.2 8 .2 9.8v1.7c0 1.8.3 3.6.3 3.6s.2 1.6.9 2.3c.9 1 2 .9 2.6 1 1.9.2 8 .2 8 .2s5.2 0 8.3-.2c.5-.1 1.4-.1 2.3-1 .7-.7.9-2.3.9-2.3s.3-1.8.3-3.6V9.8c0-1.8-.3-3.6-.3-3.6zM9.7 15.5V8l6.3 3.8-6.3 3.7z"/></svg>
+                      Watch on YouTube
+                    </div>
+                  </a>
                   {/* Card content */}
                   <div className="p-6">
                     <div className="flex items-start gap-4">

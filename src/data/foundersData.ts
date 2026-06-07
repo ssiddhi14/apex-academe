@@ -27,19 +27,18 @@ export interface Founder {
 
 export const founders: Founder[] = [
   {
-    initials: "RK",
-    name: "Dr. Rajesh Kumar",
-    designation: "Founder & Director",
-    message:
-      "When I founded Commerce Educators in 2010, I had one goal — to make quality CMA education accessible to every aspiring student. Over the years, we've grown from a single classroom to a premier institute, but our core philosophy remains the same: every student deserves personalized attention, world-class faculty, and a clear path to success. We don't just teach — we mentor, guide, and build the confidence that turns aspirants into achievers.",
+    initials: "AM",
+    name: "CA Akhilesh Maheshwari",
+    designation: "Founder",
+    message:"Education is not just about exams—it is about building confidence, gaining knowledge, and preparing for a successful future. At Commerce Educators, we focus on conceptual clarity, practical learning, and continuous support to help students achieve their goals.By joining us, you become part of a learning community dedicated to your growth and success. Thank you for your trust, and we look forward to being a part of your academic journey.Wishing you success in all your future endeavors.",
     image: founderImage,
   },
   {
-    initials: "PS",
-    name: "Prof. Priya Sharma",
-    designation: "Co-Founder & Academic Head",
+    initials: "DL",
+    name: "CS Disha Lohana",
+    designation: "Founder",
     message:
-      "Education is not just about passing exams — it's about building a mindset that drives lifelong success. At Commerce Educators, we focus on conceptual clarity, practical application, and continuous mentorship. Every student who walks through our doors becomes part of a family that celebrates their growth. Our innovative teaching methods and dedicated faculty ensure that each aspirant is fully prepared — not just for the CMA exam, but for a thriving career in management accounting.",
+    "It gives me immense pleasure to welcome you to Commerce Educators, a platform dedicated to making professional education accessible, engaging, and result-oriented. We believe that success comes from the right guidance, strong concepts, and consistent effort. Our focus is on helping students build confidence, gain practical understanding, and excel in professional courses such as CA, CS, and CMA. At Commerce Educators, you are not just a student—you are part of a learning community committed to your growth and success. Thank you for placing your trust in us. We look forward to being a part of your academic journey and helping you achieve your goals. Wishing you a journey filled with learning, growth, confidence, and success.",
     image: FounderImage,
   },
 ];

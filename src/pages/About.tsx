@@ -42,17 +42,24 @@ const faculty = [
   },
   {
     name: "CS Disha Lohana",
-    title: "Company Secretary & Faculty",
+    title: "Company Secretary, Educator & Founder",
     photo: dlPhoto,
-    qualifications: ["Qualified CS", "NET Qualified", "Practicing Company Secretary"],
+    qualifications: [
+      "Qualified Company Secretary",
+      "AIR 14 — CS Foundation",
+      "AIR 3 — CS Executive",
+      "AIR 5 — CS Professional",
+      "Founder, Commerce Educators",
+    ],
     experience: "12+ Years of Teaching Experience",
     bio: [
-      "CS Disha Lohana is a qualified Company Secretary with a strong academic foundation and a deep commitment to excellence in professional education.",
-      "Since 2012, she has been actively involved in teaching students pursuing professional courses such as CA, CMA, and CS, helping them build strong conceptual understanding and achieve academic success.",
-      "Over the years, she has taught at various reputed institutes in Jaipur through both offline and online platforms, earning a reputation for her clarity of explanation and student-centric approach.",
+      "CS Disha Lohana is a qualified Company Secretary, educator, mentor, and founder of Commerce Educators. Her journey is a true reflection of dedication, consistency, and academic excellence. She secured AIR 14 in CS Foundation, AIR 3 in CS Executive, and AIR 5 in CS Professional, establishing herself among the top-performing students at every stage of the CS course.",
+      "Teaching has always been more than a profession for her — it is a passion. Even before founding Commerce Educators, she was actively involved in guiding and mentoring commerce students, helping them navigate the challenges of professional courses with confidence and clarity.",
+      "Over the years, she has guided students pursuing CA, CS, and CMA courses through both online and offline platforms. Her ability to simplify complex legal and auditing concepts, combined with a practical and exam-oriented approach, has helped students build strong conceptual foundations and achieve outstanding results.",
+      "Having experienced the journey of securing All India Ranks herself, she understands the mindset, discipline, and preparation required to excel in professional examinations — and strives to instill the same confidence in her students.",
     ],
-    philosophy: "Her teaching philosophy focuses on simplifying complex legal and regulatory concepts, connecting theory with practical application, and preparing students not just for examinations but for their professional careers.",
-    quote: "My objective is simple – to make learning easier, concepts stronger, and success achievable for every student.",
+    philosophy: "Her teaching methodology focuses on conceptual clarity, smart study techniques, structured revision, and continuous motivation. Her vision is to create a learning environment where students not only prepare for examinations but also develop a strong foundation for their professional careers.",
+    quote: "Every student has the potential to succeed when provided with the right guidance, strategy, and support.",
     subjects: [
       {
         level: "CA / CMA Final",
