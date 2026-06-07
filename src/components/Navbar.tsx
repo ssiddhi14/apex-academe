@@ -115,6 +115,9 @@ const Navbar = () => {
           <Button variant="gold" size="sm" asChild>
             <a href="https://www.commerceeducators.com/courses" target="_blank" rel="noopener noreferrer">Enroll Now</a>
           </Button>
+          <Button variant="gold" size="sm" asChild>
+            <a href="https://www.youtube.com/@commerceeducators111" target="_blank" rel="noopener noreferrer">Watch Demo Lectures</a>
+          </Button>
         </div>
 
         {/* Mobile toggle */}

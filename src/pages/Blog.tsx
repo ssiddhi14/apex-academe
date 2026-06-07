@@ -39,8 +39,8 @@ const BlogPage = () => {
                 <div className="p-5">
                   <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
                     <span className="bg-accent/10 text-accent px-2.5 py-0.5 rounded-full font-medium">{post.tag}</span>
-                    <span className="flex items-center gap-1"><Calendar className="h-3 w-3" /> {post.date}</span>
-                    <span className="flex items-center gap-1"><Clock className="h-3 w-3" /> {post.readTime}</span>
+                    {/* <span className="flex items-center gap-1"><Calendar className="h-3 w-3" /> {post.date}</span> */}
+                    {/* <span className="flex items-center gap-1"><Clock className="h-3 w-3" /> {post.readTime}</span> */}
                   </div>
                   <h3 className="text-lg font-heading font-bold text-foreground mb-2 group-hover:text-accent transition-colors leading-snug">{post.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4">{post.excerpt}</p>

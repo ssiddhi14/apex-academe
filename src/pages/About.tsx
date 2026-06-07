@@ -1,16 +1,69 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Award, Target, Heart, GraduationCap, ChevronLeft, ChevronRight, BookOpen, CheckCircle2, ArrowRight } from "lucide-react";
+import { Award, Target, Heart, ChevronLeft, ChevronRight, BookOpen, CheckCircle2, ArrowRight, Briefcase, GraduationCap as GradCap, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import { founders } from "@/data/foundersData";
+import amPhoto from "@/assets/as.jpeg";
+import dlPhoto from "@/assets/dl.jpeg";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.1 } } };
+
+const faculty = [
+  {
+    name: "CA Akhilesh Maheshwari",
+    title: "Chartered Accountant & Senior Faculty",
+    photo: amPhoto,
+    qualifications: ["Qualified CA (2014)", "NET Qualified", "Practicing Chartered Accountant"],
+    experience: "12+ Years of Teaching Experience",
+    bio: [
+      "CA Akhilesh Maheshwari is a qualified Chartered Accountant who completed his CA qualification in 2014. He is also NET (National Eligibility Test) qualified, demonstrating his strong academic foundation and commitment to excellence in education.",
+      "Since 2012, he has been actively involved in teaching students pursuing professional courses such as CA, CMA, and CS. His teaching journey began even before qualifying as a Chartered Accountant, reflecting his passion for mentoring aspiring professionals.",
+      "Over the years, he has taught at various reputed institutes in Jaipur through both offline and online platforms, helping thousands of students build strong conceptual understanding and achieve academic success.",
+    ],
+    philosophy: "His teaching philosophy focuses on simplifying complex concepts, connecting theory with practical application, and preparing students not just for examinations but for their professional careers.",
+    quote: "My objective is simple – to make learning easier, concepts stronger, and success achievable for every student.",
+    subjects: [
+      {
+        level: "CA / CMA Final",
+        list: ["Strategic Financial Management (SFM)", "Corporate Financial Reporting (CFR)", "Business Valuation (BV)"],
+      },
+      {
+        level: "CA / CMA Intermediate",
+        list: ["Financial Accounting", "Corporate Accounting", "Financial Management"],
+      },
+    ],
+  },
+  {
+    name: "CS Disha Lohana",
+    title: "Company Secretary & Faculty",
+    photo: dlPhoto,
+    qualifications: ["Qualified CS", "NET Qualified", "Practicing Company Secretary"],
+    experience: "12+ Years of Teaching Experience",
+    bio: [
+      "CS Disha Lohana is a qualified Company Secretary with a strong academic foundation and a deep commitment to excellence in professional education.",
+      "Since 2012, she has been actively involved in teaching students pursuing professional courses such as CA, CMA, and CS, helping them build strong conceptual understanding and achieve academic success.",
+      "Over the years, she has taught at various reputed institutes in Jaipur through both offline and online platforms, earning a reputation for her clarity of explanation and student-centric approach.",
+    ],
+    philosophy: "Her teaching philosophy focuses on simplifying complex legal and regulatory concepts, connecting theory with practical application, and preparing students not just for examinations but for their professional careers.",
+    quote: "My objective is simple – to make learning easier, concepts stronger, and success achievable for every student.",
+    subjects: [
+      {
+        level: "CA / CMA Final",
+        list: ["Corporate and Economic Laws", "Strategic Performance Management", "Cost and Management Audit (CMAD)"],
+      },
+      {
+        level: "CA / CMA Intermediate",
+        list: ["Laws and Ethics", "Corporate Accounting and Auditing", "Business Data Analytics"],
+      },
+    ],
+  },
+];
 
 const milestones = [
   { year: "2010", event: "Founded with a vision to democratize CMA education" },
@@ -139,83 +192,112 @@ const AboutPage = () => {
             About Commerce Educators
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.1 } }} className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
-            Empowering CMA aspirants since 2010 with world-class coaching and mentorship.
+            Empowering CMA aspirants with world-class coaching and mentorship.
           </motion.p>
         </div>
       </section>
 
-      {/* Mission / Vision / Values */}
-      <section className="section-padding">
+      {/* ── Faculty Section ── */}
+      <section className="section-padding bg-muted">
         <div className="container-main">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid md:grid-cols-3 gap-6">
-            {[
-              { icon: Target, title: "Our Mission", desc: "To provide accessible, high-quality CMA coaching that transforms careers and builds future finance leaders." },
-              { icon: Heart, title: "Our Vision", desc: "To be India's most trusted and results-driven coaching institute for management accounting education." },
-              { icon: Award, title: "Our Values", desc: "Excellence, integrity, student-first approach, innovation in education, and a commitment to every student's success." },
-            ].map((item, i) => (
-              <motion.div key={i} variants={fadeInUp} className="bg-card rounded-xl border border-border p-8 text-center card-hover">
-                <div className="h-14 w-14 rounded-xl bg-accent/10 flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="h-7 w-7 text-accent" />
-                </div>
-                <h3 className="text-xl font-heading font-bold text-foreground mb-3">{item.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
-              </motion.div>
-            ))}
+          {/* Section heading */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-14">
+            <motion.span variants={fadeInUp} className="inline-block text-xs font-bold uppercase tracking-widest text-accent mb-3">
+              Meet Our Educators
+            </motion.span>
+            <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-heading font-extrabold text-foreground">
+              Faculty Members
+            </motion.h2>
+            <motion.p variants={fadeInUp} className="text-muted-foreground mt-3 max-w-2xl mx-auto">
+              Our faculty brings together decades of professional practice and teaching experience to deliver exam-focused, concept-driven education.
+            </motion.p>
           </motion.div>
-        </div>
-      </section>
 
-      {/* Timeline */}
-      {/* <section className="section-padding">
-        <div className="container-main max-w-3xl">
-          <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="text-3xl font-heading font-bold text-foreground text-center mb-14">
-          </motion.h2>
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="relative">
-            <div className="absolute left-5 md:left-1/2 top-0 bottom-0 w-0.5 bg-border md:-translate-x-px" />
-
-            {milestones.map((m, i) => (
+          {/* Faculty cards — photo always left, bio always right */}
+          <div className="space-y-16">
+            {faculty.map((f, fi) => (
               <motion.div
-                key={i}
-                variants={fadeInUp}
-                className={`relative flex items-start mb-12 last:mb-0 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
+                key={fi}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={stagger}
+                className="grid lg:grid-cols-[340px_1fr] gap-10 items-start"
               >
-                <div className="hidden md:block md:w-1/2" />
-
-                <div className="absolute left-5 md:left-1/2 -translate-x-1/2 h-10 w-10 rounded-full bg-accent flex items-center justify-center z-10 shadow-md">
-                  <GraduationCap className="h-4 w-4 text-accent-foreground" />
-                </div>
-
-                <div className={`ml-14 md:ml-0 md:w-1/2 ${i % 2 === 0 ? "md:pr-10" : "md:pl-10"}`}>
-                  <div className="bg-card rounded-xl border border-border p-5 card-hover">
-                    <span className="text-xs font-bold text-accent">{m.year}</span>
-                    <p className="text-sm text-foreground mt-1 leading-relaxed">{m.event}</p>
+                {/* ── Photo + quick-info card ── */}
+                <motion.div variants={fadeInUp}>
+                  <div className="bg-card border border-border rounded-2xl overflow-hidden shadow-lg">
+                    <div className="relative h-80 w-full overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10">
+                      <img
+                        src={f.photo}
+                        alt={f.name}
+                        className="w-full h-full object-cover object-top"
+                      />
+                      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-card/90 to-transparent" />
+                    </div>
+                    <div className="p-6 -mt-2">
+                      <h3 className="text-xl font-heading font-extrabold text-foreground">{f.name}</h3>
+                      <p className="text-sm font-semibold text-accent mt-0.5 mb-4">{f.title}</p>
+                      <ul className="space-y-2 mb-4">
+                        {f.qualifications.map((q, qi) => (
+                          <li key={qi} className="flex items-center gap-2 text-sm text-muted-foreground">
+                            <GradCap className="h-3.5 w-3.5 text-accent shrink-0" />
+                            {q}
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="flex items-center gap-2 bg-accent/10 rounded-lg px-3 py-2">
+                        <Briefcase className="h-4 w-4 text-accent shrink-0" />
+                        <span className="text-sm font-semibold text-accent">{f.experience}</span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section> */}
+                </motion.div>
 
-      {/* Achievements */}
-      {/* <section className="section-padding bg-primary">
-        <div className="container-main">
-          <h2 className="text-3xl font-heading font-bold text-primary-foreground text-center mb-10">Achievements</h2>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-            {[
-              { val: "15,000+", label: "Students Trained" },
-              { val: "50+", label: "All India Rankers" },
-              { val: "95%", label: "Success Rate" },
-              { val: "14+", label: "Years of Excellence" },
-            ].map((a, i) => (
-              <div key={i} className="glass rounded-xl p-6">
-                <div className="text-3xl font-heading font-extrabold text-secondary">{a.val}</div>
-                <div className="text-sm text-primary-foreground/70 mt-1">{a.label}</div>
-              </div>
+                {/* ── Bio + subjects + quote ── */}
+                <motion.div variants={fadeInUp}>
+                  <div className="space-y-3 mb-6">
+                    {f.bio.map((para, pi) => (
+                      <p key={pi} className="text-muted-foreground leading-relaxed text-sm">{para}</p>
+                    ))}
+                    <p className="text-muted-foreground leading-relaxed text-sm">{f.philosophy}</p>
+                  </div>
+
+                  <h4 className="text-base font-heading font-bold text-foreground mb-4 flex items-center gap-2">
+                    <BookOpen className="h-4 w-4 text-accent" />
+                    Subjects Taught
+                  </h4>
+                  <div className="grid sm:grid-cols-2 gap-4 mb-6">
+                    {f.subjects.map((group, gi) => (
+                      <div key={gi} className="bg-card border border-border rounded-xl p-4">
+                        <span className={`inline-block text-xs font-bold uppercase tracking-wider rounded-full px-2.5 py-1 mb-3 ${gi === 0 ? "bg-primary text-primary-foreground" : "bg-accent text-accent-foreground"}`}>
+                          {group.level}
+                        </span>
+                        <ul className="space-y-1.5">
+                          {group.list.map((subj, si) => (
+                            <li key={si} className="flex items-start gap-2 text-sm text-muted-foreground">
+                              <CheckCircle2 className="h-3.5 w-3.5 text-accent shrink-0 mt-0.5" />
+                              {subj}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="relative bg-primary/5 border-l-4 border-accent rounded-r-xl px-5 py-4">
+                    <Quote className="h-6 w-6 text-accent/30 absolute top-3 right-4" />
+                    <p className="text-sm italic text-foreground font-medium leading-relaxed pr-8">
+                      "{f.quote}"
+                    </p>
+                    <p className="text-xs text-accent font-semibold mt-2">— {f.name}</p>
+                  </div>
+                </motion.div>
+              </motion.div>
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* ── CMA Intermediate Coaching ── */}
       <section className="section-padding overflow-hidden">

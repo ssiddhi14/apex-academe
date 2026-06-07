@@ -53,44 +53,18 @@ const HeroCarousel = () => {
   }, [next]);
 
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section className="relative h-[320px] md:h-[380px] flex items-center overflow-hidden">
       {slides.map((slide, i) => (
         <div
           key={i}
           className={`absolute inset-0 transition-opacity duration-700 ${i === current ? "opacity-100" : "opacity-0"}`}
         >
-          <img src={slide.src} alt={slide.alt} className="w-full h-full object-cover" width={1920} height={800} />
-          <div className="absolute inset-0 gradient-hero opacity-90" />
+          <img src={slide.src} alt={slide.alt} className="w-full h-full object-cover object-center" width={1920} height={380} />
+          <div className="absolute inset-0 gradient-hero opacity-80" />
         </div>
       ))}
 
-      <div className="relative container-main px-4 py-20 md:py-32">
-        <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-3xl">
-          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 rounded-full bg-secondary/20 backdrop-blur-sm px-4 py-2 text-sm font-medium text-primary-foreground/90 mb-6 border border-secondary/30">
-            <Star className="h-4 w-4 text-secondary" />
-            Rated #1 CMA Coaching Institute
-          </motion.div>
-          <motion.h1 variants={fadeInUp} className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-primary-foreground leading-tight mb-4">
-            {slides[current].headline}
-          </motion.h1>
-          <motion.p variants={fadeInUp} className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mb-8 leading-relaxed">
-            {slides[current].sub}
-          </motion.p>
-          <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
-            <Button variant="hero" size="lg" className="text-base px-8" asChild>
-              <a href="https://www.commerceeducators.com/courses" target="_blank" rel="noopener noreferrer">Enroll Now <ArrowRight className="h-5 w-5 ml-1" /></a>
-            </Button>
-            <Button variant="hero-outline" size="lg" className="text-base px-8" asChild>
-              <Link to="/contact">Watch Demo Lectures</Link>
-            </Button>
-          </motion.div>
-          <motion.div variants={fadeInUp} className="mt-8 flex items-center gap-6 text-primary-foreground/70 text-sm">
-            <span className="flex items-center gap-1"><CheckCircle className="h-4 w-4 text-secondary" /> Free Counselling</span>
-            <span className="flex items-center gap-1"><CheckCircle className="h-4 w-4 text-secondary" /> Flexible Batches</span>
-            <span className="flex items-center gap-1"><CheckCircle className="h-4 w-4 text-secondary" /> Recorded lectures</span>
-          </motion.div>
-        </motion.div>
-      </div>
+     
 
       {/* Arrows */}
       <button onClick={prev} className="absolute left-4 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-card/30 backdrop-blur-sm flex items-center justify-center hover:bg-card/60 transition-colors z-10" aria-label="Previous slide">
@@ -202,7 +176,7 @@ const Index = () => {
                 <h3 className="text-xl font-heading font-bold text-foreground mb-2">{course.title}</h3>
                 <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{course.desc}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-muted-foreground flex items-center gap-1"><Clock className="h-3.5 w-3.5" /> {course.duration}</span>
+                  {/* <span className="text-xs text-muted-foreground flex items-center gap-1"><Clock className="h-3.5 w-3.5" /> {course.duration}</span> */}
                   <Link to={course.path} className="text-sm font-medium text-accent flex items-center gap-1 group-hover:gap-2 transition-all">
                     Learn More <ChevronRight className="h-4 w-4" />
                   </Link>
