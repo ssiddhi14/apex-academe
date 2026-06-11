@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Trophy, Star } from "lucide-react";
+import { Trophy } from "lucide-react";
 import Layout from "@/components/Layout";
 import { toppers } from "@/data/toppersData";
 
@@ -47,14 +47,14 @@ const ResultsPage = () => {
             <Trophy className="h-8 w-8 text-secondary inline-block mr-2 -mt-1" />
             Our Toppers
           </motion.h2>
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="flex flex-wrap justify-center gap-5">
             {toppers.map((t, i) => (
-              <motion.div key={i} variants={fadeInUp} className="bg-card rounded-xl border border-border p-5 card-hover text-center">
-                <div className="h-16 w-16 rounded-full bg-secondary/15 flex items-center justify-center mx-auto mb-3 overflow-hidden">
+              <motion.div key={i} variants={fadeInUp} className="bg-card rounded-xl border border-border p-5 card-hover text-center w-[220px]">
+                <div className="h-28 w-28 rounded-full bg-secondary/15 flex items-center justify-center mx-auto mb-3 overflow-hidden">
                   {t.image ? (
-                    <img src={t.image} alt={t.name} className="h-full w-full object-cover" />
+                    <img src={t.image} alt={t.name} className="h-full w-full object-cover object-top" />
                   ) : (
-                    <span className="text-xl font-bold text-secondary">
+                    <span className="text-2xl font-bold text-secondary">
                       {t.name.split(' ').map(n => n[0]).join('')}
                     </span>
                   )}
@@ -64,12 +64,6 @@ const ResultsPage = () => {
                 </div>
                 <h3 className="font-heading font-bold text-foreground text-sm">{t.name}</h3>
                 <p className="text-xs text-accent font-medium">{t.exam}</p>
-                <div className="flex items-center justify-center gap-0.5 my-2">
-                  {[...Array(5)].map((_, j) => (
-                    <Star key={j} className="h-3 w-3 fill-secondary text-secondary" />
-                  ))}
-                </div>
-                <p className="text-xs text-muted-foreground leading-relaxed">"{t.quote}"</p>
               </motion.div>
             ))}
           </motion.div>

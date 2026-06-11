@@ -18,7 +18,7 @@ const cmaCourses = [
     // fees: "₹15,000",
     subjects: ["Fundamentals of Economics & Management", "Fundamentals of Accounting", "Fundamentals of Laws & Ethics", "Fundamentals of Business Mathematics & Statistics"],
     highlights: ["Daily doubt sessions", "Weekly mock tests", "Comprehensive study material", "Online mode"],
-    schedule: "Morning: 7-9 AM | Evening: 5-7 PM",
+    // schedule: "Morning: 7-9 AM | Evening: 5-7 PM",
     color: "border-accent",
   },
   {
@@ -28,7 +28,7 @@ const cmaCourses = [
     // fees: "₹25,000",
     subjects: ["Financial Accounting", "Laws & Ethics", "Direct Taxation", "Cost Accounting", "Operations Management", "Cost & Management Accounting", "Indirect Taxation", "Company Accounts & Audit"],
     highlights: ["Expert CMA faculty", "Practice-heavy approach", "Previous year paper analysis", "Personalized mentoring"],
-    schedule: "Morning: 7-10 AM | Evening: 4-7 PM",
+    // schedule: "Morning: 7-10 AM | Evening: 4-7 PM",
     color: "border-secondary",
   },
   {
@@ -38,7 +38,7 @@ const cmaCourses = [
     // fees: "₹30,000",
     subjects: ["Corporate Laws & Compliance", "Strategic Financial Management", "Strategic Cost Management", "Direct Tax Laws & International Taxation", "Corporate Financial Reporting", "Indirect Tax Laws & Practice", "Cost & Management Audit", "Strategic Performance Management"],
     highlights: ["Case study approach", "Industry expert guest lectures", "Intensive revision batches", "1-on-1 mentorship"],
-    schedule: "Weekdays: 8-11 AM | Weekends: 9 AM-1 PM",
+    // schedule: "Weekdays: 8-11 AM | Weekends: 9 AM-1 PM",
     color: "border-primary",
   },
 ];
@@ -74,7 +74,7 @@ const CoursesPage = () => {
                       {/* <span className="flex items-center gap-1"><Clock className="h-4 w-4" /> {course.duration}</span> */}
                       {/* <span className="flex items-center gap-1"><IndianRupee className="h-4 w-4" /> {course.fees}</span> */}
                       <span className="flex items-center gap-1"><BookOpen className="h-4 w-4" /> {course.subjects.length} Subjects</span>
-                      <span className="flex items-center gap-1"><Users className="h-4 w-4" /> {course.schedule}</span>
+                      {/* <span className="flex items-center gap-1"><Users className="h-4 w-4" /> {course.schedule}</span> */}
                     </div>
 
                     <h4 className="text-sm font-semibold text-foreground mb-2">Subjects Covered:</h4>

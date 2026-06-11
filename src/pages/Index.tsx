@@ -273,7 +273,7 @@ const Index = () => {
 
           <div className="text-center mt-10">
             <Button variant="default" size="lg" asChild>
-              <Link to="https://clpmarshal.page.link/yzNn">Enroll Now <ArrowRight className="h-4 w-4 ml-2" /></Link>
+              <Link to="https://www.commerceeducators.com/courses">Explore Now <ArrowRight className="h-4 w-4 ml-2" /></Link>
             </Button>
           </div>
         </div>

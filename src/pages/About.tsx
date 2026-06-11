@@ -51,7 +51,7 @@ const faculty = [
       "AIR 5 - CS Professional",
       "Founder, Commerce Educators",
     ],
-    experience: "12+ Years of Teaching Experience",
+    experience: "6+ Years of Teaching Experience",
     bio: [
       "CS Disha Lohana is a qualified Company Secretary, educator, mentor, and founder of Commerce Educators. Her journey is a true reflection of dedication, consistency, and academic excellence. She secured AIR 14 in CS Foundation, AIR 3 in CS Executive, and AIR 5 in CS Professional, establishing herself among the top-performing students at every stage of the CS course.",
       "Teaching has always been more than a profession for her — it is a passion. Even before founding Commerce Educators, she was actively involved in guiding and mentoring commerce students, helping them navigate the challenges of professional courses with confidence and clarity.",
@@ -329,10 +329,10 @@ const AboutPage = () => {
                 <div className="absolute -bottom-10 -right-10 h-64 w-64 rounded-full bg-white/5 z-0" />
                 {/* content above overlay */}
                 <div className="relative z-10">
-                  <motion.span variants={fadeInUp} className="inline-block text-xs font-bold uppercase tracking-widest text-secondary mb-4">
-                    Why Choose
+                  <motion.span variants={fadeInUp} className="inline-block text-5xl font-bold uppercase tracking-widest text-secondary mb-4">
+                    Why Choose ?
                   </motion.span>
-                  <motion.h3 variants={fadeInUp} className="text-2xl md:text-3xl font-heading font-extrabold text-white leading-tight mb-4">
+                  <motion.h3 variants={fadeInUp} className="text-xs md:text-3xl font-heading font-extrabold text-white leading-tight mb-4">
                     COMMERCE&nbsp;&nbsp;&nbsp;EDUCATORS <br />
                     {/* <span className="text-secondary">Commerce Educators</span> */}
                   </motion.h3>
