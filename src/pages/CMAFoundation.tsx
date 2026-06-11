@@ -48,9 +48,9 @@ const CMAFoundationPage = () => (
 
     <section className="section-padding">
       <div className="container-main">
-        <Link to="/courses" className="inline-flex items-center gap-1 text-sm text-accent hover:underline mb-8">
+        {/* <Link to="/courses" className="inline-flex items-center gap-1 text-sm text-accent hover:underline mb-8">
           <ArrowLeft className="h-4 w-4" /> Back to All Courses
-        </Link>
+        </Link> */}
 
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid md:grid-cols-2 gap-6">
           {subjects.map((subject, i) => (

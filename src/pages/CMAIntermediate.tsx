@@ -144,9 +144,9 @@ const CMAIntermediatePage = () => (
 
     <section className="section-padding">
       <div className="container-main">
-        <Link to="/courses" className="inline-flex items-center gap-1 text-sm text-accent hover:underline mb-8">
+        {/* <Link to="/courses" className="inline-flex items-center gap-1 text-sm text-accent hover:underline mb-8">
           <ArrowLeft className="h-4 w-4" /> Back to All Courses
-        </Link>
+        </Link> */}
 
         {/* Subjects — grouped by Group I / II */}
         <motion.h2
