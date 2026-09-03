@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import { Phone, Mail, Clock, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Layout from "@/components/Layout";
-import { useToast } from "@/hooks/use-toast";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -13,13 +12,19 @@ const fadeInUp = {
 };
 
 const ContactPage = () => {
-  const { toast } = useToast();
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", course: "", message: "" });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast({ title: "Inquiry Submitted!", description: "We'll get back to you within 24 hours." });
-    setFormData({ name: "", email: "", phone: "", course: "", message: "" });
+
+    const subject = encodeURIComponent(
+      `CMA Inquiry – ${formData.name}${formData.course ? ` (${formData.course})` : ""}`
+    );
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCourse: ${formData.course || "Not specified"}\n\nMessage:\n${formData.message}`
+    );
+
+    window.location.href = `mailto:Commerceeducators111@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (

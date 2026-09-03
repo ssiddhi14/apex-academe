@@ -57,7 +57,7 @@ const HeroCarousel = () => {
   }, [next]);
 
   return (
-    <section className="relative h-[320px] md:h-[380px] flex items-center overflow-hidden">
+    <section className="relative h-[420px] md:h-[560px] flex items-center overflow-hidden">
       {slides.map((slide, i) => (
         <div
           key={i}
@@ -224,7 +224,7 @@ const Index = () => {
             <motion.div variants={fadeInUp} className="w-full">
               <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-border shadow-lg bg-card">
                 <iframe
-                  src="https://www.youtube.com/embed/AotCL-v--4Q"
+                  src="https://www.youtube.com/embed/QLU6j_he-pQ"
                   title="Commerce Educators - Online CMA Coaching"
                   className="absolute inset-0 w-full h-full"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
