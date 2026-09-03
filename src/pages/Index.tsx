@@ -224,7 +224,7 @@ const Index = () => {
             <motion.div variants={fadeInUp} className="w-full">
               <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-border shadow-lg bg-card">
                 <iframe
-                  src="https://youtu.be/QLU6j_he-pQ"
+                  src="https://www.youtube.com/embed/QLU6j_he-pQ"
                   title="Commerce Educators - Online CMA Coaching"
                   className="absolute inset-0 w-full h-full"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
